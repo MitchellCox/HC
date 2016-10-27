@@ -1,0 +1,84 @@
+<p>Lucidchart allows you to import your AWS infrastructure to easily create diagrams that represent your AWS architecture.</p>
+<p>This help article answers common AWS Import questions. For more detailed information on how to import your AWS architecture, check out our <a href="https://lucidchart.zendesk.com/hc/en-us/articles/207299996-AWS-Architecture-Import-and-Diagram-Creation">AWS Import and Diagram Creation</a> tutorial.</p>
+
+<!-- Accordion Text --> 
+<div id="accordion" class="panel-group">
+
+	<!--Accordion 1--> 
+	<div class="panel panel-default">
+		<div class="panel-heading">			
+			<a style="color: #3D4752;" class="accordion-toggle collapsed" href="#collapseOne" data-toggle="collapse" data-parent="#accordion2" onClick= "ga('send', {
+				  hitType: 'event',
+				  eventCategory: 'articleAccordion',
+				  eventAction: 'open',
+				  eventLabel: 'awsImportQuestion1Connection'
+				});">
+				Why is there a connection between two items I didn't expect to be connected?
+			</a>
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>Lucidchart's AWS import draws connections based on security groups and subnets, and looks for ports to be open on both sides of a connection. If you're seeing connections you don't expect between items, it's likely that the items have open ports between them. For example, one item may have a port open to send traffic to all IPs, and the other item may have the same port open to receive traffic from all IPs.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Accordion 2-->
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<a style="color: #3D4752;" class="accordion-toggle collapsed" href="#collapseTwo" data-toggle="collapse" data-parent="#accordion2" onClick= "ga('send', {
+				  hitType: 'event',
+				  eventCategory: 'articleAccordion',
+				  eventAction: 'open',
+				  eventLabel: 'awsImportQuestion2Automatic'
+				});">
+				Why don't you make the diagram completely automatic?
+			</a>
+		</div>
+		<div id="collapseTwo" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>The first version of Lucidchart's AWS Import tool built diagrams automatically, but customer feedback showed that creating such large, complex diagrams wasn't helpful. The current iteration of the tool provides all the resources to choose from, including the correct icons, names, tags, and all other metadata. This allows a user to quickly create a diagram for their specific use case without any of the tedious work of typing out names or copying and pasting information from the AWS console.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Accordion 3--> 
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<a style="color: #3D4752;" class="accordion-toggle collapsed" href="#collapseThree" data-toggle="collapse" data-parent="#accordion2" onClick= "ga('send', {
+				  hitType: 'event',
+				  eventCategory: 'articleAccordion',
+				  eventAction: 'open',
+				  eventLabel: 'awsImportQuestion3MissingInstances'
+				});">
+				Why are some of my instances not showing up?
+			</a>
+		</div>
+		<div id="collapseThree" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>Instances within autoscaling groups are represented by the autoscaling group itself, rather than showing each individual instance, as they would all have the same connections. You can still see the instance IDs for those instances in the "Shape Data" panel.</p>
+			</div>
+		</div>
+	</div>
+
+	<!-- Accordion 4--> 
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<a style="color: #3D4752;" class="accordion-toggle collapsed" href="#collapseFour" data-toggle="collapse" data-parent="#accordion2" onClick= "ga('send', {
+				  hitType: 'event',
+				  eventCategory: 'articleAccordion',
+				  eventAction: 'open',
+				  eventLabel: 'awsImportQuestion4IAM'
+				});">
+				How do I give Lucidchart access to my AWS architecture? 
+			</a>
+		</div>
+		<div id="collapseFour" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>In order for Lucidchart to access your AWS infrastructure, you’ll need to give Lucidchart the credentials for a new IAM user with an inline policy. For an overview of how to create an IAM user with an inline policy, check out <a href="https://lucidchart.zendesk.com/hc/en-us/articles/208018563">this article</a>.</p>
+			</div>
+		</div>
+	</div>
+
+</div>
+<!-- End Accordion Text--> 
