@@ -1,0 +1,53 @@
+<!-- Main Div --> 
+<div> 
+  <!-- Header --> 
+  <header class="my-activities-header">
+    {{breadcrumbs}}
+    <div class="my-activities-nav">
+      <ul>
+        {{#if help_center.request_management_enabled}}
+          <li>{{link 'requests'}}</li>
+        {{/if}}
+        <li>{{link 'contributions'}}</li>
+        <li>{{t 'following'}}</li>
+      </ul>
+    </div>
+  </header> 
+	<!-- End Header --> 
+  <!-- Following Table --> 
+  <div class="my-activities-table following-table">
+    {{#if subscriptions}}
+      <table>
+        <thead>
+          <tr>
+            <th>{{t 'title'}}</th>
+            <th>{{t 'type'}}</th>
+            <th>{{t 'subscription'}}</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each subscriptions}}
+            <tr>
+              <td><a href="{{url}}" title="{{title}}">{{excerpt title characters=60}}</a></td>
+              <td>{{name}}</td>
+              <td>{{subscribe}}</td>
+              <td>{{unsubscribe}}</td>
+            </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      {{pagination}}
+    {{else}}
+      <p>{{t 'not_following'}}</p>
+    {{/if}}
+  </div>
+  <!-- End Following Table --> 
+</div>
+
+<!-- OLD CODE: --> 
+<!-- <nav class="home-nav">
+          <a class="category-link-home" href="/hc">Home</a>
+          <a class="category-link-201133776" href="/hc/en-us/categories/201133776-Knowledge-Base">Knowledge Base</a>
+          <a class="category-link-201133796" href="/hc/en-us/community/topics/">Community</a>
+    </nav> -->

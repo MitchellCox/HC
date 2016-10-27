@@ -1,0 +1,115 @@
+<header class="header">
+  
+  <!-- Main Div --> 
+  <div class="header-inner">
+    <!--Lucidchart Logo, Account, Docs --> 
+    <div class="clearfix">
+      <div class="logo" style="float:left">
+        <a href="//lucidchart.com"><img src="{{logo_url}}" alt="{{t 'logo'}}" width="148"></a>
+      </div>
+      <div style="float:right;">
+        <nav class="user-nav">
+          <a href="//www.lucidchart.com/users/settings/">Account</a>
+          <a href="//www.lucidchart.com/documents">Documents</a>
+         
+          <!-- {{#if signed_in}}
+            <a href="//www.lucidchart.com/users/logout/" class="login">Log out</a>
+          {{else}}
+           <a href="//www.lucidchart.com/users/login/" class="login">Log in</a>
+          {{/if}} --> 
+          
+          <!-- <div class="language-selector">
+            {{#if alternative_locales}}
+              <div class="dropdown language-selector" aria-haspopup="true">
+                <a class="dropdown-toggle">
+                  {{current_locale.name}}
+                </a>
+                <span class="dropdown-menu dropdown-menu-end" role="menu">
+                  {{#each alternative_locales}}
+                    <a href="{{url}}" dir="{{direction}}" rel="nofollow" role="menuitem">
+                      {{name}}
+                    </a>
+                  {{/each}}
+                </span>
+              </div>
+            {{/if}}
+          </div> --> 
+        </nav>
+      </div>
+    </div>
+    <!-- End Logo, Account, Docs--> 
+    
+    <!-- Help Center Link--> 
+    <div class="clearfix">
+	    <div class="column">
+        <h1><a href="//lucidchart.zendesk.com/hc/">Help Center</a></h1>
+      </div>
+      <div class="column right">
+        <div class="user-nav-2">
+        <!-- {{#if signed_in}}
+
+        {{else}}
+        <iframe src="https://lucidchart.zendesk.com/hc/en-us/community/posts/new" style="display:none" hidden></iframe>
+
+        {{/if}} --> 
+
+          <!-- add these dynamically when we figure out this bug of why they're not showing up -->
+          <!--{{link 'new_request' class='submit-a-request'}}
+  	    	{{link 'my_activities' class='my-activities'}}-->
+        </div>
+      </div>
+    </div>
+    <!-- End Help Center Logo -->
+    
+    <!-- Search --> 
+    {{search submit=false class='search-small'}}
+    <!-- End Search --> 
+    
+    <!-- Home, KB, Community Links -->
+    <div class="clearfix" class="header-home-nav">
+      <div class="home-nav">
+          <a class="category-link-home" href="/hc" onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'header',
+              eventAction: 'navigateHome',
+              eventLabel: 'headerHome'
+            });">Home</a>
+          <a class="category-link-201133776" href="/hc/en-us/categories/201133776-Knowledge-Base" onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'header',
+              eventAction: 'navigateKB',
+              eventLabel: 'headerKB'
+            });">Knowledge Base</a>
+          <a class="category-link-201133796" href="/hc/en-us/community/topics/" onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'header',
+              eventAction: 'navigateCommunity',
+              eventLabel: 'headerCommunity'
+            });">Community</a>
+    	</div>
+  	</div>
+    <!-- End home, KB, community links --> 
+    
+  </div> 
+  <!-- end main div --> 
+  
+	<!-- Start of lucidchart Zendesk Widget script -->
+  <script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","lucidchart.zendesk.com");
+  /*]]>*/
+  </script>
+	<!-- End of lucidchart Zendesk Widget script -->
+  
+	<!-- Autofill user data in widget -->
+  <script>
+    zE(function() {
+      var userName = HelpCenter.user.name; 
+      var userEmail = HelpCenter.user.email; 
+      zE.identify({
+        name: userName,
+        email: userEmail
+      });
+    });
+  </script>
+	<!-- End of Autofill user data in widget -->
+  
+</header>

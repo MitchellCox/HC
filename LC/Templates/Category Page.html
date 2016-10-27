@@ -1,0 +1,198 @@
+<style>
+.category-link-{{category.id}} {border-bottom: 3px solid #4AA1BC; font-weight: 600;}
+</style>
+
+<!--Main Div --> 
+<section class="clearfix section-area">  
+  <!--Sections --> 
+  <div class="column two-thirds">
+    {{#if category.sections}}
+      <div class="section-tree">
+        <ul class="posts">
+        {{#each sections}}
+          <li class="test">
+            <section class="section">
+              <h3>
+                {{#if internal}}
+                  <span class="visibility-internal" data-title="{{t 'internal'}}">
+                    <span class="visibility-internal-icon"></span>
+                  </span>
+                {{/if}}
+                <span>{{name}}</span>
+              </h3>
+              {{#if articles}}
+                <ul class="article-list">
+                  {{#each articles}}
+                    <li {{#if promoted}} class="article-promoted" {{/if}} >
+                      {{#if promoted}}
+                        <span data-title="{{t 'promoted'}}">★</span>
+                      {{/if}}
+                      <a href="{{url}}">{{title}}</a>
+                    </li>
+                  {{/each}}
+                </ul>
+                {{#if more_articles}}
+                  <a href="{{url}}" class="see-all-articles">
+                    {{t 'show_all_articles' count=article_count}}
+                  </a>
+                {{/if}}
+              {{else}}
+                <i class="section-empty">
+                  <a href="{{url}}">{{t 'empty'}}</a>
+                </i>
+              {{/if}}
+            </section>
+          </li>
+        {{/each}}
+        </ul>
+      </div>
+    {{else}}
+      <i class="category-empty">
+        <a href="{{category.url}}">{{t 'empty'}}</a>
+      </i>
+    {{/if}}
+  </div>
+	<!--End Section Titles --> 
+  
+  <!-- Popular Use Cases --> 
+  <div class="links-list column one-third">
+      <h3>Popular Use Cases</h3>
+      <ul class="links"><li class="menu-126 first"><a href="http://www.lucidchart.com/pages/examples/flowchart_software?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194" onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'flowchart'
+            });" target="_blank" title="Free Flowchart Software and Flowchart Examples">Flowchart</a></li>
+      <li class="menu-127"><a href="http://www.lucidchart.com/pages/examples/wireframe_software?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'wireframe'
+            });" target="_blank" title="Wireframe Software and Wireframe Examples">Wireframe software</a></li>
+      <li class="menu-132"><a href="https://www.lucidchart.com/pages/examples/floor-plans?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'floorplan'
+            });" target="_blank" title="Floor Plan Layouts">Floor plans</a></li>
+      <li class="menu-132"><a href="https://www.lucidchart.com/pages/er-diagram-tool?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'erd'
+            });" target="_blank" title="ER diagrams">ERD</a></li>
+      <li class="menu-132"><a href="http://www.lucidchart.com/pages/examples/uml_diagram_tool?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'UML'
+            });" target="_blank" title="Free UML Tool to Draw UML Diagrams">UML diagram</a></li>
+      <li class="menu-133"><a href="http://www.lucidchart.com/pages/examples/orgchart_software?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'orgChart'
+            });" target="_blank" title="Free Org Chart Software and Organizational Chart Examples">Org charts</a></li>
+      <li class="menu-128"><a href="http://www.lucidchart.com/pages/examples/iphone_mockup_tool?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'iPhoneMockups'
+            });" target="_blank" title="iPhone Mockup Tool">iPhone mockups</a></li>
+      <li class="menu-915"><a href="http://www.lucidchart.com/pages/examples/ipad-mockup-tool?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'iPadMockup'
+            });" target="_blank" title="iPad mockups made easy">iPad mockup tool</a></li>
+      <li class="menu-913"><a href="http://www.lucidchart.com/pages/examples/android_mockup_tool?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'android'
+            });"target="_blank" title="Android Mockup Tool">Android mockups</a></li>
+      <li class="menu-131"><a href="http://www.lucidchart.com/pages/examples/business_process_modeling?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'bpmn'
+            });" target="_blank" title="Business Process Modeling Software and BPMN Examples">Business process modeling</a></li>
+      <li class="menu-130 active-trail active"><a href="http://www.lucidchart.com/pages/examples/mind_mapping_software?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'mindMap'
+            });" target="_blank" title="Free Mind Mapping Software and Online Whiteboard" class="active-trail active">Mind map software</a></li>
+      <li class="menu-129"><a href="http://www.lucidchart.com/pages/examples/sitemap_creator?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'siteMap'
+            });" target="_blank" title="Interactive Sitemap Creator and Sitemap Examples">Site map creator</a></li>
+      <li class="menu-134"><a href="http://www.lucidchart.com/pages/examples/network_diagram_software?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'network'
+            });" target="_blank" title="Free Network Diagram Software and Network Diagram Examples">Network diagrams</a></li>
+      <li class="menu-241"><a href="http://www.lucidchart.com/pages/examples/venn_diagram_maker?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'venn'
+            });" target="_blank">Venn diagram</a></li>
+      <li class="menu-923"><a href="http://www.lucidchart.com/pages/node/639?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'aws'
+            });" target="_blank" title="Free AWS Simple Icon diagram software">AWS network diagram</a></li>
+      <li class="menu-921"><a href="http://www.lucidchart.com/pages/examples/server-rack-diagram?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'serverRack'
+            });" target="_blank" title="Free server rack diagram software">Rack diagrams</a></li>
+      <li class="menu-917"><a href="http://www.lucidchart.com/pages/examples/value-stream-mapping?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'valueStream'
+            });" target="_blank" title="Free value stream mapping software">Value stream maps</a></li>
+      <li class="menu-925"><a href="http://www.lucidchart.com/pages/examples/cisco-network-diagram?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'ciscoNetwork'
+            });" target="_blank" title="Cisco network diagram software">Cisco network diagrams</a></li>
+      <li class="menu-919 last"><a href="http://www.lucidchart.com/pages/process-engineering-p-and-id-diagrams?__hstc=215508872.fe4e898913429f0f1e446c60680eb3c5.1452547349920.1452547349920.1452557118679.2&amp;__hssc=215508872.1.1452557118679&amp;__hsfp=2622359194"  onClick= "ga('send', {
+              hitType: 'event',
+              eventCategory: 'popularUseCases',
+              eventAction: 'navigateToPage',
+              eventLabel: 'p&id'
+            });" target="_blank" title="Free process &amp; instrumentation diagram software">P&amp;ID</a></li>
+      </ul>      
+  </div>
+  <!--End Popular Use Cases --> 
+</section>
+
+<!-- OLD CODE: --> 
+
+  <!--  <div class="column third">
+    First half of articles
+  </div>
+  <div class="column third">
+    Second half of articles
+  </div>-->
+
+  <!-- Category Name Title
+		<div class="column third right">
+			<h1>{{category.name}}</h1>
+		</div> --> 
+
+<!-- Old Header
+				<nav class="home-nav">
+          <a class="category-link-home" href="/hc">Home</a>
+          <a class="category-link-201133776" href="/hc/en-us/categories/201133776-Knowledge-Base">Knowledge Base</a>
+          <a class="category-link-201133796" href="/hc/en-us/community/topics/">Community</a>
+    		</nav> --> 
