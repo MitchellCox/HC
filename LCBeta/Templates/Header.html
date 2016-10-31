@@ -1,0 +1,56 @@
+<header class="header">
+  <div class="header-inner">
+    <div class="clearfix">
+      <div class="logo" style="float:left">
+        <a href="//lucidchart.com"><img src="//p5.zdassets.com/hc/theme_assets/948775/200229778/lucidchart-logo.png" alt="{{t 'logo'}}" width="148"></a>
+      </div>
+      <div style="float:right;">
+        <nav class="user-nav">
+          <a href="//www.lucidchart.com/users/settings/">Account</a>
+          <a href="//www.lucidchart.com/documents">Documents</a>
+         <!-- {{#if signed_in}}
+  <a href="//www.lucidchart.com/users/logout/" class="login">Log out</a>
+{{else}}
+ <a href="//www.lucidchart.com/users/login/" class="login">Log in</a>
+{{/if}} -->
+         
+        </nav>
+      </div>
+    </div>
+    
+    <div class="clearfix">
+	    <div class="column">
+        <h1><a href="//lucidchartbeta.zendesk.com/hc/">Help Center</a></h1>
+      </div>
+      <div class="column right">
+        <nav class="user-nav-2">
+<!-- {{#if signed_in}}
+          
+{{else}}
+<iframe src="https://lucidchart.zendesk.com/hc/en-us/community/posts/new" style="display:none" hidden></iframe>
+
+{{/if}} --> 
+
+          <!-- add these dynamically when we figure out this bug of why they're not showing up -->
+          <!--{{link 'new_request' class='submit-a-request'}}
+  	    	{{link 'my_activities' class='my-activities'}}-->
+        </nav>
+      </div>
+    </div>
+    
+    {{search submit=false class='search-small'}}
+  </div>
+
+<!-- Autofill user data in widget -->
+<script>
+  zE(function() {
+    var userName = HelpCenter.user.name; 
+		var userEmail = HelpCenter.user.email; 
+    zE.identify({
+      name: userName,
+      email: userEmail
+    });
+  });
+</script>
+<!-- End of Autofill user data in widget -->
+</header>
