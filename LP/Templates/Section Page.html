@@ -1,0 +1,40 @@
+<style>
+.section-link-201130146 {border-bottom: 3px solid #4AA1BC; font-weight: 600;}
+</style>
+<section class="clearfix section-area">
+  <div class="column third right">
+    <h1>{{#if section.internal}}
+      <!--<span class="visibility-internal" data-title="{{t 'internal'}}">
+        <span class="visibility-internal-icon"></span>
+      </span>-->
+    {{/if}}     <nav class="sub-nav clearfix">
+    </nav>{{section.name}}</h1>
+  </div>
+	<!-- <div class="two-thirds column">
+        <nav class="home-nav">
+          <a class="category-link-home" href="/hc">Home</a>
+          <a class="category-link-201130146" href="/hc/en-us/categories/201134776-Knowledge-Base">Knowledge Base</a>
+          <a class="category-link-201130176" href="/hc/en-us/community/topics/">Community</a>
+    </nav> -->
+    
+    <div class="section-tree">{{#if section.articles}}
+      <h3>{{section.name}}</h3>
+      <ul class="article-list posts">
+        {{#each section.articles}}
+          <li {{#if promoted}} class="article-promoted" {{/if}} class="test">
+            {{#if promoted}}
+              <span data-title="{{t 'promoted'}}">★</span>
+            {{/if}}
+            <a href="{{url}}">{{title}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <i class="section-empty">
+        <a href="{{section.url}}">{{t 'empty'}}</a>
+      </i>
+    {{/if}}
+
+    {{pagination}}</div>
+  </div> 
+</section>

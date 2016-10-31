@@ -1,0 +1,62 @@
+<style>
+.category-link-201130176 {border-bottom: 3px solid #4AA1BC; font-weight: 600;}
+</style>
+<header>
+  <!-- <div class="main-column-right">
+    <nav class="home-nav">
+          <a class="category-link-home" href="/hc">Home</a>
+          <a class="category-link-201130146" href="/hc/en-us/categories/201134776-Knowledge-Base">Knowledge Base</a>
+          <a class="category-link-201130176" href="/hc/en-us/community/topics/">Community</a>
+    </nav>
+  </div> -->
+  <div class='side-column-right'>
+    <nav class="community-nav">
+      <ul>
+        <!-- <li>{{link 'new_post' role='button'}}</li> --> 
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+<h3 class="page-header">
+  {{t 'what_is_your_post_about'}}
+</h3>
+
+<div class="form">
+  {{#form 'post' class='new_community_post'}}
+    <div class="form-field {{#required 'title'}} required {{/required}}">
+      {{label 'title'}}
+      {{input 'title'}}
+      {{#validate 'title'}}
+        <div class="notification notification-error notification-inline">
+          {{error 'title'}}
+        </div>
+      {{/validate}}
+    </div>
+
+    {{suggestion_list class='searchbox'}}
+
+    <div class="form-field {{#required 'details'}} required {{/required}}">
+      {{label 'details'}}
+      {{wysiwyg 'details'}}
+      {{#validate 'details'}}
+        <div class="notification notification-error notification-inline">
+          {{error 'details'}}
+        </div>
+      {{/validate}}
+    </div>
+
+    <div class="form-field {{#required 'topic'}} required {{/required}}">
+      {{label 'topic'}}
+      {{select 'topic'}}
+      {{#validate 'topic'}}
+        <div class="notification notification-error notification-inline">
+          {{error 'topic'}}
+        </div>
+      {{/validate}}
+    </div>
+
+    <footer>{{input type='submit'}}</footer>
+  {{/form}}
+</div>

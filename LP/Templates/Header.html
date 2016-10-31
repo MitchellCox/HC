@@ -1,0 +1,60 @@
+<header class="header">
+  <div class="header-inner">
+    <div class="clearfix">
+      <div class="logo" style="float:left">
+        <a href="//lucidpress.com"><img src="{{logo_url}}" alt="{{t 'logo'}}" width="148"></a>
+      </div>
+      <div style="float:right;">
+        <nav class="user-nav">
+          <a href="//www.lucidpress.com/users/settings/">Account</a>
+          <a href="//www.lucidpress.com/documents">Documents</a>
+         <!-- {{#if signed_in}}
+  <a href="//www.lucidpress.com/users/logout/" class="login">Log out</a>
+{{else}}
+ <a href="//www.lucidpress.com/users/login/" class="login">Log in</a>
+{{/if}}-->
+        </nav>
+      </div>
+    </div>
+    
+    <div class="clearfix"> 
+	    <div class="column">
+        <h1><a href="//lucidpress.zendesk.com/hc/">Help Center</a></h1>
+      </div>
+      <div class="column right">
+        <nav class="user-nav-2">
+
+          <!-- <a href="/hc/en-us/requests/new">Submit a Request</a> -->
+          <!-- add these dynamically when we figure out this bug of why they're not showing up all the time -->
+          <!-- {{link 'new_request' class='submit-a-request'}}
+  	    	{{link 'my_activities' class='my-activities'}} -->
+        </nav>
+      </div>
+    </div>
+    {{search submit=false class='search-small'}}
+   <div class="clearfix" class="header-home-nav">
+      <nav class="home-nav">
+          <a class="category-link-home" href="/hc">Home</a>
+          <a class="category-link-201130146" href="/hc/en-us/categories/201134776-Knowledge-Base">Knowledge Base</a>
+          <a class="category-link-201130176" href="/hc/en-us/community/topics/">Community</a>
+    </nav>
+  </div> 
+  </div> 
+    
+  <!-- Start of lucidpress Zendesk Widget script -->
+<script>/*<![CDATA[*/window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","lucidpress.zendesk.com");
+/*]]>*/</script>
+<!-- End of lucidpress Zendesk Widget script -->
+  <!-- Autofill user data in widget -->
+<script>
+  zE(function() {
+    var userName = HelpCenter.user.name; 
+		var userEmail = HelpCenter.user.email; 
+    zE.identify({
+      name: userName,
+      email: userEmail
+    });
+  });
+</script>
+<!-- End of Autofill user data in widget -->
+</header>

@@ -1,0 +1,123 @@
+<style>
+.category-link-201130176 {border-bottom: 3px solid #4AA1BC; font-weight: 600;}
+  
+.sorters-tab {border-bottom: 3px solid #4AA1BC; font-weight: 600;}
+.btn {left: 10px; right: 10px} 
+</style>
+  
+<header>
+ <!-- <div class="main-column-right">
+    <nav class="home-nav">
+          <a class="category-link-home" href="/hc">Home</a>
+          <a class="category-link-201130146" href="/hc/en-us/categories/201134776-Knowledge-Base">Knowledge Base</a>
+          <a class="category-link-201130176" href="/hc/en-us/community/topics/">Community</a>
+    </nav>
+  </div> -->
+</header>
+
+<div class="clearfix">
+  <div class="main-column-right">
+
+    <header class="topic-header">
+      <h1 class="topic-heading">
+        {{#if topic.internal}}
+          <span class="visibility-internal" data-title="{{t 'internal'}}">
+            <span class="visibility-internal-icon"></span>
+          </span>
+        {{/if}}
+        {{topic.name}}
+      </h1>
+    <!--  <span class="topic-filters" role=button>
+        <span class="dropdown">
+          <span class="dropdown-toggle">
+            {{current_filter.label}}
+          </span>
+          <span class="dropdown-menu" role="menu"> -- >
+            {{#each filters}}
+              <a href="{{url}}" aria-selected="{{selected}}" role="menuitem">
+                {{name}}
+              </a>
+            {{/each}}
+          </span>
+        </span>
+      </span>
+      
+      <!-- <span class="topic-meta">
+        {{t 'follower_count' count=topic.follower_count}}
+      </span> --> 
+      <span>
+        {{subscribe}}
+      </span>
+      <span>
+        {{link 'new_post' role='button' class='btn'}}
+      </span>
+    </header>
+
+    <p class="topic-description">{{topic.description}}</p>
+
+    <section class="topic-questions">
+
+      {{!--
+      ** NEW COMMUNITY SNIPPET **
+      Please uncomment these lines if you want to allow your users to filter posts by status  --}}
+  
+      <nav class="community-sub-nav">
+        <ul>
+          {{#each sorters}}
+            <li>
+              {{#if selected}}
+                <p class="sorters-tab">
+                  {{name}}
+                </p>
+              {{else}}
+                <a href="{{url}}" >
+                  {{name}}
+                </a>
+              {{/if}}
+            </li>
+          {{/each}}
+        </ul>
+      </nav>
+      {{#if posts}}
+        <ul class="question-list">
+          {{#each posts}}
+            <li class="question {{#if has_official_comment}} question-official-answer {{/if}} {{#if featured}} post-featured {{/if}} {{#if pinned}} post-pinned {{/if}}">
+              <h3 class="question-title">
+                <a href="{{url}}">{{title}}</a>
+              </h3>
+              <div class="question-meta">
+                <span class="question-author">
+                  {{#if author.url}}
+                    <a href="{{author.url}}" target="_zendesk_lotus">
+                      {{author.name}}
+                    </a>
+                  {{else}}
+                    {{author.name}}
+                  {{/if}}
+                </span>
+                <span class="question-published">
+                  {{date created_at timeago=true}}
+                </span>
+                <span class="question-votes">
+                  {{vote_sum}} {{t 'vote' count=vote_sum}}
+                </span>
+                <span class="question-answers">
+                  {{comment_count}} {{t 'comment' count=comment_count}}
+                </span>
+                {{! Show the post status, if any }}
+                {{#is status 'none'}}
+                {{else}}
+                  <span class="post-{{status_dasherized}}">{{status_name}}</span>
+                {{/is}}
+              </div>
+            </li>
+          {{/each}}
+        </ul>
+      {{else}}
+        <p>{{t 'no_content'}}</p>
+      {{/if}}
+
+      {{pagination}}
+    </section>
+  </div>
+</div>

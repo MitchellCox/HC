@@ -1,0 +1,65 @@
+<style>
+.category-link-201130176 {border-bottom: 3px solid #4AA1BC; font-weight: 600;}
+</style>
+<!-- <nav class="sub-nav clearfix">
+  <h4 class="community-heading">
+    {{t 'community'}}
+  </h4>
+  {{search}}
+</nav> -->
+<header>
+ <!-- <div class="main-column-right">
+   <nav class="home-nav">
+          <a class="category-link-home" href="/hc">Home</a>
+          <a class="category-link-201130146" href="/hc/en-us/categories/201134776-Knowledge-Base">Knowledge Base</a>
+          <a class="category-link-201130176" href="/hc/en-us/community/topics/">Community</a>
+    </nav>
+  </div> -->
+  <div class='side-column-right'>
+    <!-- <nav class="community-nav">
+      <ul>
+        <!-- <li>{{t 'topics'}}</li> -->
+        <!-- <li>{{link 'posts'}}</li> --> 
+        <!-- <li>{{link 'new_post' role='button'}}</li>
+      </ul>
+    </nav> --> 
+  </div>
+</header>
+
+<div class="main">
+  <div >
+    <h2>Welcome to the official Lucidpress Community Help Forum!</h2>
+    <p>Use the search bar above or browse the Forums below. If you cannot find your answer on your own, feel free to submit a new forum post; our community of expert Lucidpress users are happy to help.</p>
+    <!-- <nav class="community-sub-nav">
+      <ul>
+        <li>{{t 'Help Forum Topics'}}</li>
+      </ul>
+    </nav> --> 
+
+    {{#if topics}}
+      <ul class="topic-list">
+        {{#each topics}}
+          <li class="topic">
+            <h3 class="topic-title">
+              {{#if internal}}
+                <span class="visibility-internal" data-title="{{t 'internal'}}">
+                  <span class="visibility-internal-icon"></span>
+                </span>
+              {{/if}}
+              <a href="{{url}}">{{name}}</a>
+            </h3>
+            <span class="topic-meta">
+              <span>{{t 'post_count' count=post_count}}</span>
+              <span>{{t 'follower_count' count=follower_count}}</span>
+            </span>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <p>{{t 'no_content'}}</p>
+    {{/if}}
+
+    {{pagination}}
+
+  </div>
+</div>
