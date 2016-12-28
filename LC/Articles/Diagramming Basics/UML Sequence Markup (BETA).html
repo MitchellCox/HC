@@ -1,0 +1,80 @@
+<p>Create and edit your sequence diagrams by entering text.</p>
+<p><img src="/hc/en-us/article_attachments/204485543/example.PNG" alt="markup.PNG" align="middle" /></p>
+
+<div id="accordion" class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseOne" data-toggle="collapse" data-parent="#accordion2">To create a sequence diagram using markup, follow these steps:</a></div>
+
+		<div id="collapseOne" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<ol>
+					<li>Activate the UML shape library. To do this, press “More Shapes” on the bottom left of the Editor, use the hotkey “M”, or start a new document from a UML template.</li>
+					<li>Under the “UML Sequence” category in the left toolbar, click “Use Markup.”<br /><br /><img class="wysiwyg-text-align-center" src="/hc/en-us/article_attachments/204229786/usemarkup.PNG" alt="" /></li>
+					<li>In the pop-over, type your markup.</li>
+					<li>Click "Build" when you are ready to generate the diagram.<br /><br /><img src="/hc/en-us/article_attachments/204229866/markuppopover.PNG" alt="" width="449" height="337" /></li>
+					<li>To edit the markup of a diagram that you have already built, simply click on the diagram and the pop-over will appear on the left side of the Editor.</li>
+					<li>To create a new diagram, click "Use Markup" again. </li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseTwo" data-toggle="collapse" data-parent="#accordion2">Supported Markup</a>
+		</div>
+
+		<div id="collapseTwo" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<p>We currently support the following markup, provided by <img src="/hc/en-us/article_attachments/204488143/PlantUML-logo.png" alt="" width="32" height="29" /> <a href="http://plantuml.com/sequence.html">PlantUML</a>, and will add more markup types as the need arises. Please emailsupport@lucidchart.com if you are looking for a specific type of UML sequence markup that we do not currently support.</p>
+				<ul>
+					<li>To draw a message between two participants, use</li>
+					<ul>
+						<li>-&gt; for a solid line (Alice-&gt;Bob)</li>
+						<li>--&gt; for a dotted line (Bob--&gt;Alice)</li>
+					</ul>
+					<li>To add a label to messages between participants, use : label.</li>
+					<ul>
+						<li>Alice-&gt;Bob: label</li>
+					</ul>
+					<li>If you would like to include a line break in the text, you can use a \n to break the label.</li>
+					<ul>
+						<li>Alice-&gt;Bob: text\nTest</li>
+					</ul>
+					<li>To add comments on messages, use a single apostrophe (‘) to start the comment. (<em>Note: Contractions in labels are not currently possible for this reason.) </em>You can put comments on multiple lines by using /’ to start and ‘/ to end.</li>
+					<li>You can list out the participants and give them aliases. Put each participant on a new line using the format below:</li>
+				</ul>
+				<p>Participant a as Alice</p>
+				<p>Participant b as Bob</p>
+				<ul>
+					<li>Participants and messages can only be one word long unless they are inside quotation marks:</li>
+				</ul>
+				<p>Participant a as “Alice Jones”</p>
+				<ul>
+					<li>A message to self is supported by simply using Alice-&gt;Alice</li>
+					<li>We support three arrow styles at the moment:</li>
+					<ul>
+						<li>Closed arrow: -&gt;</li>
+						<li>Open arrow: -&gt;&gt;</li>
+						<li>No arrow: -</li>
+					</ul>
+					<li>To label a <strong>grouping</strong>, type “opt label” on a new line. To include text in the grouping, continue onto the next line and enter the text to go inside the label. On a third line, type “end.”</li>
+				</ul>
+				<p>Opt label</p>
+				<p>Alice-&gt;Bob: this other text</p>
+				<p>End</p>
+			</div>
+		</div>
+	</div>
+</div>
+<br />
+<p><strong>Common questions</strong></p>
+<ul>
+	<li><em>Can I re-edit my sequence diagram’s markup after closing the markup dialogue?</em> Yes, you can do this as long as you have not manually adjusted or ungrouped the diagram on the canvas. To re-open the dialogue box, simply select the diagram and the pop-over panel will open in the left toolbar for you to re-edit the diagram’s markup.</li>
+	<li><em>How can I style my sequence diagram? </em>Select the sequence diagram and use the top options bar to style your diagram. If you would like to style individual blocks/elements on your diagram, you must first ungroup the diagram by doing the following: select the diagram &gt; right-click &gt; Ungroup. Note: Ungrouping means you will not be able to re-edit the markup.</li>
+</ul>
+<hr />
+<p><strong>Related Community Posts</strong></p>
+<p><a href="/hc/en-us/community/posts/206429316-Aliases-in-Sequence-Markup">Aliases in Sequence Mark-up</a></p>
+<p><a href="/hc/en-us/community/posts/205302796-UML-Sequence-Diagrams">UML Sequence Diagrams</a></p>

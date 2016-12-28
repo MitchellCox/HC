@@ -1,0 +1,91 @@
+<p>Integrating Lucidchart with Okta enables your users to authenticate using SAML single sign-on through Okta. Furthermore, SCIM integration allows admins to create users, provision, and deprovision users within Okta itself, no need to sign into Lucidchart. The following tutorial walks through the process of integrating Okta with Lucidchart. You will need admin privileges in both Okta and Lucidchart to complete this integration.</p>
+
+<div id="accordion" class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseOne" data-toggle="collapse" data-parent="#accordion2">Setting up Lucidchart within Okta - Basic Setup</a></div>
+
+		<div id="collapseOne" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<ol>
+					<li>To get started, you will first add Lucidchart to your Okta Application Network and generate the Okta metadata for Lucidchart. Log into Okta and select the blue ‘Admin’ button in the top right of the dashboard.<br /><br /><img src="https://lh4.googleusercontent.com/T51ZdhhHc62SwGM_nzLNlfR9oDR6wrduTgIt5TuwX-MpqadELOdIaQxG4LC7tCFBmMTS9NEP46xgyVOIzUEfMzazM3Gv78KzsPqMaU-PbFff7U78pWq4Xu-xBbTFOq5nVkbABSc" alt="" width="887" height="64" /></li>
+					<li>Select ‘Add Applications’ from the shortcut menu on the right side of the admin dashboard.<br /><br /><img src="https://lh5.googleusercontent.com/ER3a38gsZGXs63eyzXV0ABRm8DmZ2pf5ob9P8P9A32XG7iYY38bHr-XOOrVf52m1IhKl-Mw_pKkKTYKX9bMjV1z10HtGNvMm7n_AKBqJeYCBCqqWaNb5RYAYhq4IvAtMVG55ZPo" alt="" width="887" height="260" /></li>
+					<li>Search for ‘Lucidchart’ in the applications search bar and select ‘Add’ on the Lucidchart application.<br /><br /><img src="https://lh6.googleusercontent.com/9450t3HOTiOmjsX-4xg7tDr9MWfp3YUGyeRl_-CeNYSHc71aggaoXJPImiFKHIlEq0khX5bFXVP9Hk1OHwPXt5JUMwjhTmZ04QMhKXh0PDMxLrXd1wH2KdyN0VA2mWbEiKv84ww" alt="" width="900" height="173" /></li>
+					<li>Enter your domain on the ‘General Settings’ page and select ‘Next’ in the bottom right. Be sure to <strong>only enter your domain, not a full URL.</strong><br /><br /><img src="/hc/en-us/article_attachments/204516663/01_-_Add_Lucidchart_-_General_Settings.png" alt="" width="889" height="452" /></li>
+					<li>Assign Lucidchart to your organization by selecting ‘Select All’ on the ‘Assign to People’ page. Then, select ‘Next’ in the bottom right. <em>Note</em>: This will not automatically provision users within Lucidchart.<br /><br /><img src="https://lh6.googleusercontent.com/FzZreB30lnh68NHEbE9PNwTJzKiRiR0Y1kQpx81l7wzWShi6S43srbHKCOt40YGgpfegAB1VTBf2nKhsquPui9siIeV4vb7PfNZx9aI3ul9cXoqEo-JXmJ2eJZciiiaM97MY4yC7" alt="" width="904" height="465" /></li>
+					<li>The following page confirms that the Okta username will be used to authenticate users into Lucidchart. Select ‘Done’ to complete adding the app.<br /><br /><img src="https://lh6.googleusercontent.com/XnotadriMNDW9C3_WwRpf-e40KnSjyv_bNJWrMDFkI6WmhmFtp0eqo-u77RkMUA7qy6q_175DQtDOX1MlzUQ8aiLM3xkGVlgzwJg1j0wisDwp-Qx1A4ZiowssLmr0Y5VAPIaF5ip" alt="" width="890" height="415" /></li>
+					<li>Lucidchart has been added to your Okta Application network. Next, you need to retrieve the Okta metadata to link your Lucidchart and Okta accounts. After adding the application Okta will direct you to the ‘People’ settings page for the newly added Lucidchart application. Select ‘ Sign On’ to complete the integration.<br /><br /><img src="https://lh4.googleusercontent.com/Hpvdkky96kfcZcbtBV74zIFLYN00AQznkuyFB2-9UrHCMQxVvLexkOnXfKgOYBU5a6-BJGTFpRkqa9Hu6b3bKxEGDubmILc-ji3dFjWDihI0aCfsyjVqNLoo3QegWqCC6TEOFRpD" alt="" width="879" height="269" /></li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseTwo" data-toggle="collapse" data-parent="#accordion2">Configuring SAML for Lucidchart in Okta</a>
+		</div>
+
+		<div id="collapseTwo" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<ol>
+					<li>From the 'Applications' area click on the 'Lucidchart' app to view the settings.</li>
+					<li>On the 'Sign On' tab, edit the configuration, and change from "Secure Web Authentication" to "SAML 2.0"<br /><br /><img src="/hc/en-us/article_attachments/204260006/02_-_Configure_SAML.png" alt="" width="876" height="785" /></li>
+					<li>With SAML 2.0 selected, click on the ‘View Setup Instructions’ to access the Okta metadata. This metadata instructs Lucidchart on how to communicate with Okta.<br /><br /><img src="https://lh6.googleusercontent.com/PqruPEd8lbHIsDH_EcaZPIthA0nyZjpiMlWWHaKd8SHb8iHeVELMTdZz32ZB7Fff1LAC03Vxj6qb07eMgZZ5hKHajgZsr2peUIZVa0ybv4oXyh_ELfuqDvzYbUiFJgc3XXLs9Tji" alt="" width="859" height="715" /></li>
+					<li>Okta will open a new page that includes the Lucidchart metadata. Copy all of the code under step 2 on the instructions page.<br /><br /><img src="https://lh6.googleusercontent.com/LgaKLUYjXrEaJraHmNeQlqk79LwLEwr6opq5RmitXB7ZjUai_4DqLIL0HEUAwXeU1UoYR2DS-SvrceL9pGUTCzDP5l-uMaKPmpqQ7i2h03UMKfgTtgYQFXJ26rE0WzVsOC8Lqo7I" alt="" width="848" height="526" /></li>
+					<li>Next we will use the Okta metadata to configure the SAML integration in Lucidchart. To start, open up a second browser tab, login to your Lucidchart account, and select “Team” at the top of the screen.<br /><br /><img src="https://lh3.googleusercontent.com/Gui3ZIVdx25B-7zwWy0MjbUzuuAfs0z9a3bcYtCTK0fbnveDOAlEc2dFg7tsMZl5EwusXB4V8D_7Kd7tYBdNeM_BoEAFROW1Y-yxVVhtuC1glRdxyQfv7LyZmDhaA9dTgQSh-2Kr" alt="" width="838" height="98" /></li>
+					<li>Navigate to the ‘App Integration’ panel.<br /><br /><img src="https://lh6.googleusercontent.com/QsVCOq1lTwgir8uE20nnS93zS6XjRzhhOQaSgXNHw1mChe8CfTfMiMsGO4nULby-dTblUX0WfiMzma5VbgZCbWZE2MiXMMWKphMFGEnnRcK_O_E-nRfr5z4ZGC70jHKr0ptnIp9o" alt="" width="839" height="339" /></li>
+					<li>Select ‘SAML’ on the integrations page. <br /><br /><img src="/hc/en-us/article_attachments/204519843/03_-_SAML_highlighted__1_.png" alt="" width="836" height="225" /></li>
+					<li>Select ‘Enable SAML Integration’ at the top of the page.<br /><img src="https://lh3.googleusercontent.com/G63OsJk2PXwcTBAQlstZc0lkbrTmO8MtcmYPT4fMVySOPY9j8eBgxhyPtwAJIErhkWHZSGFyZewr-6GpB8ippbM4f024nTP2m4O6h_lldEuXRHpkVPrtnQfMseSV7kWqE5ajpR8Q" alt="" width="838" height="235" /></li>
+					<li>Enter your account domain in the ‘Domain’ field under the ‘Lucidchart Sign in URL’ section. Be sure to enter in just the domain, not a full URL.<br /><br /><img src="https://lh3.googleusercontent.com/EQub3BAV4qpEr6BCAtaVFdzmvgAUj85EIxqV1ZAldy46Mgnu6RSz0izyfho2UikdXbJQfqgdOzg6IPu8RGvR1BIZKh5GlAB2RP7abKzNZAILzljrz--1OnMUJBxUjUhp_ilxwEcS" alt="" width="823" height="211" /></li>
+					<li>Paste the Okta metadata into the text box under ‘Identity Provider Metadata’ and select ‘Save Changes’.<br /><br /><img src="https://lh3.googleusercontent.com/1Pz-uCmlQFknOxzR6tDPow9POoiGZL8PPoKInlINnK5ugEpbVG7aFy4D6O5qc27q2LlC9iHvSm0XRPyqhq-hFiv_1aFH21khwqSdxgcvOeFSizBs3vNMRlB69ohXYOKJnkIGu2zK" alt="" width="813" height="495" /></li>
+					<li>Now your Lucidchart account will support SAML single-sign on authentication through Okta.</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseThree" data-toggle="collapse" data-parent="#accordion2">Configuring SCIM for Lucidchart in Okta</a>
+		</div>
+		
+		<div id="collapseThree" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<p><strong>Lucidchart Prerequisites:</strong></p>
+				<ul>
+					<li>Must be part of an Enterprise subscription on an up-to-date pricing plan</li>
+					<li>Must have "auto-upgrades" turned on </li>
+				</ul>
+				<ol>
+					<li>To start, login to your Lucidchart account as a Lucidchart administrator. From the dropdown menu containing your username, select 'Account Settings'. <br /><br /><img src="/hc/en-us/article_attachments/204260686/01_-_SCIM_Enabled_Auto_Upgrade.png" alt="" width="809" height="206" /></li>
+					<li>Make sure your account is configured to automatically upgrade team size when licenses are requested. This setting is required for SCIM provisioning/deprovisioning to work.<br /><br /><img src="/hc/en-us/article_attachments/204519643/06_-_Automatically_Upgrade_Team__1_.png" alt="" width="808" height="409" /></li>
+					<li>Click on the 'Team' link at the top of the page and then on 'App Integration' &gt; SCIM.<br /><br /><img src="/hc/en-us/article_attachments/204261606/04_-_SCIM_highlighted__1_.png" alt="" width="799" height="220" /></li>
+					<li>Click on the 'Generate token' button to create a unique code that is shared between Lucidchart and Okta. Copy the bearer token to your clipboard.<br /><br /><img src="/hc/en-us/article_attachments/204519983/07_-_Generate_Bearer_Token.png" alt="" width="797" height="272" /></li>
+					<li>Return to Okta and login as an administrator. In the 'Admin' area of Okta, go to 'Applications' and click on the Lucidchart application.<br /><br /><img src="/hc/en-us/article_attachments/204520223/08_-_Lucidchart_Application_Listed_in_the_Admin_Area.png" alt="" width="796" height="257" /></li>
+					<li>Click the checkbox to 'Enable provisioning features'<br /><br /><img src="/hc/en-us/article_attachments/204261826/09_-_Enable_Provisioning_Features.png" alt="" width="795" height="347" /></li>
+					<li>Paste the bearer token you generated in Lucidchart into the API Token field. Then click 'Test API Credentials' to validate the connection. Select the integration points you want to enable.<br /><br /><img src="/hc/en-us/article_attachments/204261946/10_-_Enter_Bearer_Token.png" alt="" width="778" height="775" /></li>
+					<li>Here's the whole provisioning process in action. This video shows:</li>
+				</ol>
+				<ul>
+					<li>The creation of a new group called "Software Engineering."</li>
+					<li>Making Lucidchart a default application for the Software Engineering Group.</li>
+					<li>Adding two users in Okta to the Software Engineering group.</li>
+					<li>Seeing those two users appear as created, licensed accounts within Lucidchart.</li>
+				</ul>
+				<p><br /><br /><img src="/hc/en-us/article_attachments/204526243/004_-_Group_Based_Provisioning__1_.gif" alt="" width="802" height="401" /></p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<p></p>
+<p><strong><span data-mce-mark="1">Related Articles</span></strong></p>
+<p><a href="/hc/en-us/articles/207300096-Lucidchart-and-SAML">Lucidchart and SAML</a></p>
+<p><a href="/hc/en-us/articles/207300136-OneLogin-SAML-Integration">OneLogin SAML Integration</a></p>
+<p><a href="/hc/en-us/articles/209918833-Active-Directory-Federation-Services-ADFS-SAML-Integration">Active Directory Federation Services ADFS SAML Integration</a></p>
+<hr />
+<p> <strong><span data-mce-mark="1">Related Community Posts</span></strong></p>
+<p><a href="/hc/en-us/community/posts/206027163-Admin-pages-for-Google-Apps-JIRA-SAML-and-Confluence">Admin pages for Google Apps, JIRA, SAML, and Confluence</a></p>
+<p><a href="/hc/en-us/community/posts/205317546-Can-LucidChart-SAML-users-login-to-IOS-app">Can LucidChart SAML users login to IOS app</a></p>
+<p><a href="/hc/en-us/community/posts/207023266-How-do-I-setup-Identity-management-pages-">How do I set up Identity Management Pages</a></p>

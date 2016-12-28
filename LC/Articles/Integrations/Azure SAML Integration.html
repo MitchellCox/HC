@@ -1,0 +1,66 @@
+<p>Integrating Lucidchart with Azure enables your users to authenticate using SAML single-sign on through Azure. The following tutorial walks through the process of integrating Azure with Lucidchart.</p>
+<p>Note: You will need admin privileges in both Azure and Lucidchart to complete this integration.</p>
+
+<div id="accordion" class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseOne" data-toggle="collapse" data-parent="#accordion2">Setting Up Lucidchart within Azure</a></div>
+
+		<div id="collapseOne" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<p>To get started your will first add Lucidchart to your applications in Azure.</p>
+				<ol>
+					<li>Log into the Azure admin panel and select ‘Active Directory’ from the menu on the left. You may need to scroll down to locate ‘Active Directory’.<br /><br /><img src="https://lh3.googleusercontent.com/wefWbHqIoUSQzxSM5heyTZ6T-EuFH5jai3hpoUYCjBF-PaRgM3MmNc6N89qiTCWWHll9XAY7NvlpHd0nxmSIT0bmEPDFjxQ1AJz4jR0x5Ce9iiNv8n-8illy1j6WR4W3TfINnF8O" alt="" width="263" height="73" /></li>
+					<li>Select the directory where you would like to install the Lucidchart application.<br /><br /><img src="https://lh4.googleusercontent.com/Ae66RIR-oqzIk8RmogZhqeq8j9qjSzwT-5KwkrzBAFQ4I1_zE31YvSAA45AaL4RJBAoxl1h2o1YIbk-xNTfWXhiEL6YG9QVJrLRqH2BqEekW2go3i03baoOK_M_40xZR7R8dcONn" alt="" width="624" height="131" /></li>
+					<li>After accessing the directory, select ‘Applications’ from the menu at the top of the directory.<br /><br /><img src="https://lh3.googleusercontent.com/2XmGXrVq20Kkr38-wJbb6g5-7SfjSOMb5i6lDYDxE_-OvSdfbdD-4LO7J950HLbKvyB0FxuReVUkwOkreKWjpEd8xeOU6sFDDX6hXy5EtWb9ao81xduzLX8crP791hIBMAx65vTR" alt="" width="624" height="83" /></li>
+					<li>Select the ‘Add’ button at the bottom of the Applications page.<br /><br /><img src="https://lh3.googleusercontent.com/_VyyzGc7Iei278VnpNOO_rcAV1KPXnWC2XpLyeoHUMfwmWQgNaq0567wmRSH-nghaXcmuS5hGhL2CnMOBba35j9JsNTEOGmU_9NrsYaoRHAocrTd5iyeF29xtR1GX4bbXDjO9-iy" alt="" width="114" height="64" /></li>
+					<li>Select ‘Add an application from the gallery’.<br /><br /><img src="https://lh6.googleusercontent.com/83WDTHpZDHqKbitbFceI3-2JZwKo0h5IZQndsCTnqxSR2fir2ByUgwOPHVt5VDg0mlm9J2CDvQuErGtnE7acdbzZFC2ARPfNiXhYwzw3hdQ5nXpqkFPr2Yo4GodiEgBQKW9bK5oM" alt="" width="491" height="192" /></li>
+					<li>Enter Lucidchart into the search bar and press enter or select the search icon.<br /><br /><img src="https://lh5.googleusercontent.com/fizrCw4RScsqfJJAbRQLdk9M-ZkXXy3Y4b0QcG6WOYadAoV3-YFHdT2ohR2p7iJ9rKg7fKQhrwIElnPOFhA6am-FmRDboD9SGIA5K5mo15kqR59U6wifc4-WHwYVpce5VOy9RcW1" alt="" width="624" height="52" /></li>
+					<li>Select Lucidchart from the search menu and select the check box in the bottom-right corner.<br /><br /><img src="/hc/en-us/article_attachments/207145183/Screen_Shot_2016-01-07_at_2.54.51_PM.png" alt="" width="605" height="483" /></li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseTwo" data-toggle="collapse" data-parent="#accordion2">Configuring the SAML Integration</a>
+		</div>
+
+		<div id="collapseTwo" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<ol>
+					<li>Select ‘Configure Single sign-on’ from the Lucidchart application page in Azure.<br /><br /><img src="/hc/en-us/article_attachments/207120586/Screen_Shot_2016-01-07_at_2.55.20_PM.png" alt="" width="617" height="387" /></li>
+					<li>Select ‘Microsoft Azure AD Single Sign-On’ from the configuration dialogue and select the net arrow at the bottom-right of the dialogue.<br /><br /><img src="https://lh6.googleusercontent.com/k4AGaS388tIf65UnQON2CWRyxdoYUJUX2XlzHrsKguEpbTjMY5PycOb_sAixO93141uDSYK83bGMberyl8TuvWr2Z1ejPQ1WImb0V5i7fQf7EGT8wwmB1VwTXbogS5TtLXs27XIg" alt="" width="624" height="328" /></li>
+					<li>Next we will need to retrieve the Lucidchart sign-on URL from Lucidchart and insert it into Azure. Log in to your Lucidchart admin user in a new window or tab and select ‘Team’ from the top of the screen.<br /><br /><img src="https://lh5.googleusercontent.com/RTgNlwEaw5KNf-fIOi8ht5Gxc2e2bicaoYPrkhBoZEQHVw4n2uUpIXwu7cueiXAHQrS_vY-_L4e6cEJQIqQmFmAGAZTyYAgRH1yyRGjSDxsR8xxBo1ListP-59VVY6zQrD0iJuHK" alt="" width="624px;" height="73px;" /></li>
+					<li>Navigate to the ‘App Integration’ page.<br /><br /><img src="https://lh5.googleusercontent.com/LU0ovuy0C3QRsjye0Vr18wo4orGBKtAGCBwtcIET8_8ZOQLYKqQvJt5gwxFo1xAP3a4zq_biBKxVOo1tzKzDhzjPOeodGt_h3Pz7IkO0VBy3P0c9RCFAczq1nuvehhYNyeoGxq7P" alt="" width="624px;" height="252px;" /></li>
+					<li>Select ‘SAML’ on the integrations page.<br /><br /><img src="https://lh5.googleusercontent.com/j1ta9Qzgo_gEpUhMY6C7kPOxDWanQoXD-ZmQUWk5TfabDbOZt0E0GnTYewRb6fhAFsyMMaBLHgtF7CxuuuASh8xpCSdOw6HPJq8uT6xo6JcD7vTktIZIsGGAOsK_afXLYNpRNecS" alt="" width="624px;" height="257px;" /></li>
+					<li>Select ‘Enable SAML Integration’ at the top of the page.<br /><br /><img src="https://lh6.googleusercontent.com/fy_Y7FxRVuJxEdG88RkAU9AaG0e8vyFBnG9YT3Lq0YfQtwY-wJlOSxW_KPnxlXn8T6BQKBP1Mx_oRQIWoU30cUn6GimQnOWmUUr4eYzcRrxzh75fbU5Ft494U220OdZxychr-6zs" alt="" width="624px;" height="175px;" /></li>
+					<li>Enter your account domain in the ‘Domain’ field under the ‘Lucidchart Sign in URL’ section. Be sure to enter in just the domain, not a full URL. This domain must match the domain associated with your Active Directory in Azure.<br /><br /><img src="https://lh5.googleusercontent.com/4PJ1A5ZwInNM1QxaaplEmMYZV0ArcMSkYGrIVLZdYgBicp5IGO_JZvVE7eYOGRGygmyM0zAOaoJa9bS2kVP6TXNvEQxrlgUtHJBt8fBXywvNzrdVbs_qrRDuMh7fhiaEBHjxeo0M" alt="" width="624px;" height="160px;" /></li>
+					<li>Copy the Lucidchart Sign in URL and paste the URL in the ‘Sign On URL’ field in Azure. The URL should look like <a href="https://lucidchart.com/saml/sso/yourdomain.com">https://lucidchart.com/saml/sso/yourdomain.com</a>. After entering the URL, select the next arrow at the bottom-right of the dialogue.<br /><br /><img src="https://lh3.googleusercontent.com/J2naf4yniTcOuRRO7-h7FrxUM42x1KLBZTRFa9lqASKwxpuCTX_wep4Mj4VhekFc4ZcsMOUovK6sU_-8iqlPmL92cyHXXdAXMnTfszsXHb7kb3HZXeEya4pFIV8k6DvSyuAVlGJC" alt="" width="624" height="345" /></li>
+					<li>Next we will download the Azure metadata and insert it into Lucidchart. Select ‘Download metadata’ from the dialogue. Open the metadata file in a text editor and copy all of the text.<br /><br /><img src="https://lh4.googleusercontent.com/5gjMZ2ydHS64lUd9bbkfkCYAP86sYpiSrq7a179xVEPXnkMRSx5PRkv56g_2pD0P9g1BqQE2f2PhPWOES1Vl7vDqIaTw2pXzmw3Td70iuyg1ENFEo4E56kwUncs1lr8fLFK0CWeR" alt="" width="624" height="288" /></li>
+					<li>In the Lucidchart SAML integration page paste all of the metadata text into the text box under ‘Identity Provider Metadata’ in and select ‘Save changes’.<br /><br /><img src="https://lh4.googleusercontent.com/fH6Td3_CfHUbI1unfwXXOoNDONlDtDiQsGpCt4HwO6As731NRQNQSYY94xP_iwiEohwl7V-k4SLiLntKDuBvAqTq6D0nLgu_G4h8xTfpacHkkS_rMEyBrfswXDd2IKoNEq_YUhqm" alt="" width="624px;" height="380px;" /></li>
+					<li>Return the the Azure configuration dialogue and check the box at the bottom of the dialogue confirming that you’ve completed the Lucidchart SAML configuration. Select the next arrow at the bottom right of the dialogue.<br /><br /><img src="https://lh5.googleusercontent.com/cu16mk2ZC4-ghrhcur2mOGHHmgH2Zr1G42z8Pe2ac_Qb5-VF-VuVsGL0TAGyHn780aU0FSBcyMHBBo_6w2X-UxXDUfE89AcdTwnv7APUwACW9wcXQEDJwPdrkg7bn8l8B9b49uhE" alt="" width="624" height="271" /></li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseThree" data-toggle="collapse" data-parent="#accordion2">Assigning Users to Lucidchart</a>
+		</div>
+		
+		<div id="collapseThree" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<ol>
+					<li>Next we will assign user to the Lucidchart App. Select ‘Assign accounts’ on the Lucidchart app page in Azure.<br /><br /><img src="/hc/en-us/article_attachments/207120606/Screen_Shot_2016-01-07_at_2.58.31_PM.png" alt="" width="624" height="395" /></li>
+					<li>Select the user you would like to grant access to Lucidchart.<br /><br /><img src="https://lh3.googleusercontent.com/wth13XdPYgLrNZ4z8Bu9-333Diz8vW_i6qL6xqLboZgiNcB48cTRsrBBGBxgJS29Jg4SGGJTjIrgPkUnl79Pm-PEG9wwK63HdazrfUQWXm2tgOjcstPuUIHXcvGxIrceKpwEhdvl" alt="" width="624" height="397" /></li>
+					<li>Select ‘Assign’ at the bottom of the screen and select ‘Yes’ to confirm your selection.<br /><br /><img src="https://lh3.googleusercontent.com/TBPvtaa9-my_aiRf_2ckPi-BxugUznmCmD750XMQmRtkcUvRdaeplVjLaiO_o-ZnHH3ZmQ3Kr-N-1UV9VjmylRL_f1vGlGLV8ck7H_Oxu3svQTG0009bXb0AHqwTsmKWyQd1R8VX" alt="" width="624" height="363" /></li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</div>
+<p></p>
+<p>That will complete the Azure and Lucidchart integration. Now your Lucidchart account will support SAML single-sign on authentication through Azure.</p>

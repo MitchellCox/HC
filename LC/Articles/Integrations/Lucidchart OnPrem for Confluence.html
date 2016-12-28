@@ -1,0 +1,134 @@
+<p>Lucidchart OnPrem User Manual</p>
+<p><strong>Important note: </strong>Lucidchart OnPrem for Confluence is a separate product from standard Lucidchart; it works only within Confluence Server, and does not integrate with existing Lucidchart accounts. Standard Lucidchart Team or Enterprise accounts do include free add-ons for an unlimited number of Confluence, JIRA, and HipChat instances and many more integrations.</p>
+<p>If you have any questions about the differences between these two products, or would like help setting up your instance, contact our friendly support team at support@lucidchart.com</p>
+
+<div id="accordion" class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseOne" data-toggle="collapse" data-parent="#accordion2">Installation</a></div>
+
+		<div id="collapseOne" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<p>Lucidchart OnPrem installs automatically from the Atlassian Universal Plug-in Manager (UPM) or the manually via the Atlassian marketplace.</p>
+				<p><strong>To Automatically Install from the Confluence UPM</strong></p>
+				<ol>
+					<li>As an admin, open the Confluence administration menu and select "<strong>Add-ons</strong>"</li>
+					<li>Select "<strong>Find new add-ons"</strong> in the left panel to open the Confluence UPM.</li>
+					<li>earch the marketplace for "<strong>Lucidchart OnPrem" </strong>and click install to automatically install the add-on</li>
+				</ol>
+				<ul>
+					<li>Note that you may see a free add-on "Lucidchart for Confluence" with a circle icon. This add-on and others are free with a standard Team / Enterprise subscription to Lucidchart</li>
+					<li>Lucidchart OnPrem contains a server rack con (see below)</li>
+				</ul>
+				<p><strong>To Manually Install from the Marketplace</strong></p>
+				<ol>
+					<li>Download the add-on from the <a href="https://marketplace.atlassian.com/plugins/com.lucidchart.onprem.confluence.plugins.lucid-onprem-confluence/server/overview">Lucidchart OnPrem listing</a> by selecting "Try It Free" or "Purchase Now"<br /><br /><img src="/hc/en-us/article_attachments/203407953/OnPrem_listing.PNG" alt="" width="460" height="345" /></li>
+					<li>As an admin, open the Confluence administration menu and select "<strong>Add-ons</strong>"</li>
+					<li>Select "<strong>Manage add-ons"</strong> in the left panel.</li>
+					<li>Click "<strong>Upload add-on" </strong>and then select the file you downloaded in step #1.</li>
+					<li>The add-on will be uploaded and automatically installed.</li>
+				</ol>
+				<p><strong>Installation Issues</strong></p>
+				<p>For those using MySQL, there is one common error that may occur if your MySQL packet size setting is too small. This is common for larger Atlassian add-ons and is easily fixed using Atlassian's documentation below. <a href="https://confluence.atlassian.com/confkb/exceeds-max-allowed-packet-for-mysql-179443425.html" target="_blank">https://confluence.atlassian.<wbr />com/confkb/exceeds-max-<wbr />allowed-packet-for-<span class="il">mysql</span>-<wbr />179443425.html</a></p>
+				<p>Please contact us if you experience any other issues with installation.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseTwo" data-toggle="collapse" data-parent="#accordion2">Using Lucidchart in Confluence</a>
+		</div>
+		<div id="collapseTwo" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<p><strong>Insert Diagram at Top of Page</strong></p>
+				<ol>
+					<li>Select Lucidchart Diagram from the Add drop-down menu from the top-right of your wiki page in Confluence.</li>
+					<li>You will have the option to create a new Lucidchart document, insert an existing Lucidchart document, or directly import a Visio file. You can learn more about starting new documents and opening existing documents in our <a href="http://support.lucidchart.com/forums/20874510-Get-Started?__hstc=215508872.c4c997246e3346e166c688d272158c51.1460407296678.1460411000079.1460415644598.3&amp;__hssc=215508872.5.1460415644598&amp;__hsfp=2553220383">tutorials</a>. </li>
+					<li>If you are importing a Visio file or creating a new diagram you will be taken directly into the Lucidchart editor. <a href="http://support.lucidchart.com/entries/21605619-Get-familiar-with-the-editor?__hstc=215508872.c4c997246e3346e166c688d272158c51.1460407296678.1460411000079.1460415644598.3&amp;__hssc=215508872.5.1460415644598&amp;__hsfp=2553220383" target="_blank">This short tutorial</a> explains the basic components of the editor and how to get started.</li>
+					<li>When you are finished editing your document in the Lucidchart editor, click the "Return to Confluence" button in the upper right corner to return to the wiki. Your wiki entry will be automatically added or updated.</li>
+				</ol>
+				<p><strong>Insert in Specific Page Location</strong></p>
+				<ol>
+					<li>Insert a Lucidchart diagram into a specific section of your wiki-page using the macro tools inside the Confluence page editor.</li>
+					<li>Click “Edit” at the top of the wiki page, then select  "Insert" and “Add Lucidchart Diagram.”</li>
+					<li>Or, with the cursor inside the editor, type '{' to prompt the macro suggestion window. Start typing 'Lucidchart' and the Lucidchart macro will appear.</li>
+					<li>When you select the Lucidchart macro you will be taken to the Lucidchart documents page where you have the option to begin a new Lucidchart document, insert an existing Lucidchart document, or directly import a Visio file. You can learn more about starting new documents and opening existing documents in our <a href="http://support.lucidchart.com/forums/20874510-Get-Started?__hstc=215508872.c4c997246e3346e166c688d272158c51.1460407296678.1460411000079.1460415644598.3&amp;__hssc=215508872.5.1460415644598&amp;__hsfp=2553220383" target="_blank">tutorials</a>.</li>
+				</ol>
+				<p><strong>Make Changes to the Diagram Before Inserting</strong></p>
+				<ol>
+					<li>If you decide you want to make changes to the diagram before inserting, click “Edit,” and you’ll be redirected to the Lucidchart Editor.</li>
+					<li>When you’re finished editing, click “Return to Confluence” in the top right corner.</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseThree" data-toggle="collapse" data-parent="#accordion2">The LucidChart OnPrem Editor</a>
+		</div>
+		
+		<div id="collapseThree" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<p>The Lucidchart OnPrem editor is largely the same as our standard editor. <a href="http://support.lucidchart.com/entries/21605619-Get-familiar-with-the-editor?__hstc=215508872.c4c997246e3346e166c688d272158c51.1460407296678.1460411000079.1460415644598.3&amp;__hssc=215508872.5.1460415644598&amp;__hsfp=2553220383" target="_blank">This short tutorial</a> explains the basic components of the editor and how to get started.</p>
+				<p>Some functionality available in the standard version of Lucidchart is not available in Lucidchart OnPrem. You may notice these missing features if you're familiar with our standard editor, but the powerful editor largely remains the same.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseFour" data-toggle="collapse" data-parent="#accordion2">Visio Diagram and Stencil Import</a>
+		</div>
+		
+		<div id="collapseFour" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<p>Lucidchart OnPrem supports import of both Visio files and Stencil. It also allows the export of Visio diagrams. </p>
+				<p><strong>Visio File Import</strong></p>
+				<ol>
+					<li>Go to edit a Confluence page and select "+ Insert" then add "Add Lucidchart Onprem diagram"</li>
+					<li>In the left-side panel of the document picker, select "Import Visio / Gliffy File"<br /><br /><img src="/hc/en-us/article_attachments/203278286/Visio_import.PNG" alt="" width="753" height="391" /></li>
+					<li>Upload the Visio file and then select "Import." it may take a few moments to import the Visio diagram, which will then open up in Lucidchart.</li>
+				</ol>
+				<p><strong>Visio File Export</strong></p>
+				<ol>
+					<li>Open the diagram within the Lucidchart editor</li>
+					<li>Go to "File" &gt;&gt;&gt; "Download As"</li>
+					<li>Select the file type to download; options include Visio (VDX) format<br /><br /><img src="/hc/en-us/article_attachments/203408223/Visio_export.PNG" alt="" /></li>
+				</ol>
+				<p><strong>Visio Stencil Import</strong></p>
+				<ol>
+					<li>Open the diagram within the Lucidchart editor</li>
+					<li>Select "More Shapes" in the bottom left corner of the editor to open the stencil / shape library manager<br /><br /><img src="/hc/en-us/article_attachments/203408273/Shape_library.PNG" alt="" width="515" height="530" /></li>
+					<li>Click the blue "Visio Stencil" button in the top left to open the import dialogue<br /><br /><img src="/hc/en-us/article_attachments/203278486/Visio_stencil_2.PNG" alt="" /></li>
+					<li>Choose the Visio stencil file and select upload to import</li>
+					<li>The Visio stencil will then upload into a custom library within the shape manager</li>
+				</ol>
+				<p>Note that some Visio stencils contain EMF images that do not work within Lucidchart OnPrem. These can be imported with web-based Lucidchart and then you may copy and paste these into a custom shape library within Lucidchart OnPrem.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseFive" data-toggle="collapse" data-parent="#accordion2">Revision History</a>
+		</div>
+		
+		<div id="collapseFive" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<p>Every time you make a change to a Lucidchart diagram, a version is automatically saved in Confluence to prevent data loss. These are "minor" saves. By manually saving a diagram to clicking "Return to Confluence", you will automatically create a "major" version of the diagram and all previous minor changes will be erased to optimize performance.</p>
+				<p>If you would like to display (pin) or restore an older, major version of your Lucidchart diagram, rather than the most recently updated version, follow these steps:</p>
+				<ol>
+					<li>Start editing a Confluence page, select a Lucidchart diagram, and click Version in the pop-up panel.<a href="/attachments/token/NlSAZocAJV6c05cbyxepdBfTv/?name=image2015-10-30+16-45-2+%281%29.png" target="_blank"><img title="Click Version in Pop-up Panel" src="/attachments/token/NlSAZocAJV6c05cbyxepdBfTv/?name=image2015-10-30+16-45-2+%281%29.png" alt="image2015-10-30_16-45-2__1_.png" width="630" /></a></li>
+					<li>A dialogue with a list of previous versions will pop up.<br /><br /><img src="/hc/en-us/article_attachments/203278166/Revision_history.PNG" alt="" width="404" height="453" /></li>
+					<li>From here, you can choose to display or restore an older version.</li>
+				</ol>
+
+				<p><strong>To Display -</strong> to display an older version on the Confluence page, just click on the version and select "Save." The Confluence page will then show this version even if someone makes new changes to it. You can, of course, go back to displaying the latest version any time.</p>
+				<p>To help avoid possible confusion from other collaborators, the viewer will display an icon on the left side of the bottom toolbar to indicate that it's set to display an older version.<br /><br /><img title="Toolbar indicates previous version" src="/attachments/token/5ntWtDvNUHTMaZdZe9CJh7SKm/?name=image2015-10-30+16-29-3.png" alt="image2015-10-30_16-29-3.png" width="650" /></p>
+				<p><strong>To Restore -</strong> restoring an older version makes it the latest version of the diagram and all subsequent edits will be made to the new, restored version. To do this, click the blue "Restore" button.</p>
+			</div>
+		</div>
+	</div>
+</div>

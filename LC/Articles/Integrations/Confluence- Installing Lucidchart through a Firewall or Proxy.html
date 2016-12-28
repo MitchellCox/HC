@@ -1,0 +1,42 @@
+<p>Before getting started, you'll need to determine if your data center uses a proxy or not. Depending on the answer, you can follow the appropriate steps below.</p>
+
+<div id="accordion" class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseOne" data-toggle="collapse" data-parent="#accordion2">With a Proxy</a></div>
+
+		<div id="collapseOne" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<ol>
+					<li>Double check that you have Confluence set up correctly to proxy as <a href="https://confluence.atlassian.com/display/DOC/Configure+Web+Proxy+Support+for+Confluence" target="_blank">described here</a></li>
+					<li>Try setting the following two system properties: https.proxyHost and https.proxyPort</li>
+					<li>Go to Administration &gt; System Information and verify that you see the proxy params in the "Java Runtime Arguments" section. </li>
+					<li>Try installing the <a href="https://marketplace.atlassian.com/plugins/confluence.macros.html">Confluence HTML Macros plugin</a> and include a URL (using SSL) such as **https://www.wellsfargo.com** on a page to see if your proxy settings are getting picked up by any plugins</li>
+				</ol>
+				<p>If these steps still don't do the trick, please <a href="http://support.lucidchart.com/requests/new?__hstc=165860449.62afb52a3fc9af0997c21f38c28b5870.1479159421015.1479159421015.1479159421015.1&amp;__hssc=165860449.1.1479159421015&amp;__hsfp=1058097280">contact us</a> let us know the values for your Confluence Version, JVM Vendor and Java version</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseTwo" data-toggle="collapse" data-parent="#accordion2">Without a Proxy</a>
+		</div>
+
+		<div id="collapseTwo" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<p>First, follow these steps:</p>	
+				<ol>
+					<li>Try: telnet www.lucidchart.com 443</li>
+					<li>You should get: <br /><br />"Trying 23.21.229.160...<br />Connected to lucidchart-web-1117125819.us-east-1.elb.amazonaws.com."<br /><br /><em>Note:</em> Escape character is '^]'</li>
+				</ol>
+				<p>If that doesn't work, try:</p>
+				<ol>
+					<li>Connecting to a random SSL site to determine if you can connect to other SSL sites. Try: telnet www.wellsfargo.com 443</li>
+					<li>You should get: <br /><br />"Trying 151.151.88.133...<br />Connected to www.wellsfargo.com."</li>
+				</ol>
+				<p>If you're unable to connect to another SSL site, there is still probably a firewall somewhere on your network that is blocking port 443. You'll need to work with your network team to determine what firewalls and proxies might exist on your network that would be blocking port 443.</p>
+			</div>
+		</div>
+	</div>
+</div>

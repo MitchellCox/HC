@@ -1,0 +1,52 @@
+<p>In order for Lucidchart to access your AWS infrastructure, you’ll need to give Lucidchart the credentials for a new IAM user with an inline policy.</p>
+
+<p><a href="https://vimeo.com/154888448">Creating an AWS User for Lucidchart's AWS Import</a></p>
+
+<p><iframe src="https://player.vimeo.com/video/154888448" width="500" height="281" frameborder="0" allowfullscreen=""></iframe></p>
+
+<p>See below to learn how to create an IAM user with an inline policy in your AWS console.</p>
+
+<p><strong>Create an IAM User</strong></p>
+
+<p>To create an IAM user with an inline policy for Lucidchart's AWS Import, follow these steps:</p>
+	
+	<ol>
+		<li>Go to the AWS console and navigate to the “Users” section of <a href="https://console.aws.amazon.com/iam/home#users">Identity Access and Management</a></li>
+		<img src="/hc/en-us/article_attachments/202942033/Screenshot_2016-02-10_10.18.34.png" alt="" width="501" height="355" />
+	</ol>
+	<ol start="2">
+		<li>Click “Create New Users” and enter a name for the user, like “Lucidchart_AWS_Import”. Be sure to check the box next to “Generate an access key for each user” — Lucidchart will use that access key to retrieve the information about your infrastructure.</li>
+		<img src="/hc/en-us/article_attachments/202781166/Screenshot_2016-02-10_10.21.00.png" alt="" width="602" height="217" />
+	</ol>
+	<ol start="3">
+		<li>On the next screen, either click “Show User Security Credentials” and copy the Access Key ID and Secret Access Key for later use, or click “Download Credentials” to receive the Key and Secret as a .csv file. We recommend downloading the file so you can more easily reuse it during the import step.</li>
+		<img src="/hc/en-us/article_attachments/202942013/Screenshot_2016-02-10_10.21.55.png" alt="" width="601" height="206" />
+	</ol>
+	<ol start="4">
+		<li>Click “Close”, and then click on your new user in the “Users” screen.</li>
+		<img src="/hc/en-us/article_attachments/202781156/Screenshot_2016-02-10_10.24.13.png" alt="" width="894" height="201" />
+	</ol>
+	<ol start="5">
+		<li>Select the “Permissions” tab of the user summary, and expand the “Inline Policies” section to display a link to create a new inline policy.</li>
+		<img src="/hc/en-us/article_attachments/202781176/Screenshot_2016-02-10_10.24.50.png" alt="" width="606" height="357" />
+	</ol>
+	<ol start="6">
+		<li>After creating a new inline policy, select “Custom Policy”, which lets you paste in the correct policy for Lucidchart’s AWS import. Click “Select” to open up the policy editor.</li>
+		<img src="/hc/en-us/article_attachments/202942023/Screenshot_2016-02-10_10.26.03.png" alt="" width="694" height="192" />
+	</ol>
+	<ol start="7">
+		<li>Take the policy you retrieved from Lucidchart’s AWS Import tool (it’s on the first screen of the import workflow, which you can access from the “Import” button in the document list or the File &gt; Import menu inside of a document), and paste it into the policy editor. Give the policy a meaningful name, like “Lucidchart_AWS_Import”.</li>
+		<img src="/hc/en-us/article_attachments/202781186/Screenshot_2016-02-10_10.29.06.png" alt="" width="502" height="519" />
+	</ol>
+	<ol start="8">	
+		<li>Click “Apply Policy” to apply the policy to the user, and you should see that the user summary now includes a new inline policy.</li>
+		<img src="/hc/en-us/article_attachments/202942053/Screenshot_2016-02-10_10.29.38.png" alt="" width="502" height="433" />
+	</ol>
+	
+<p>Now you’re ready to use this user as part of your Lucidchart import! If you haven’t already saved this user’s access key and secret, go to “Security Credentials”, click “Create Access Key”, and then download a new set of credentials for the user.</p>
+<p><img src="/hc/en-us/article_attachments/202942043/Screenshot_2016-02-10_10.30.49.png" alt="" width="538" height="395" /><br /></p>
+
+<p> </p>
+
+<p><strong>Related Articles</strong></p>
+<p><span data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;AWS Architecture Import and Diagram Creation&quot;}" data-sheets-userformat="{&quot;2&quot;:1052802,&quot;4&quot;:{&quot;1&quot;:2,&quot;2&quot;:16573901},&quot;10&quot;:2,&quot;15&quot;:&quot;Arial&quot;,&quot;23&quot;:1}" data-sheets-formula="=HYPERLINK(&quot;https://lucidchart.zendesk.com/hc/en-us/articles/207299996-AWS-Architecture-Import-and-Diagram-Creation&quot;,&quot;AWS Architecture Import and Diagram Creation&quot;)"><a class="in-cell-link" href="/hc/en-us/articles/207299996-AWS-Architecture-Import-and-Diagram-Creation" target="_blank">AWS Architecture Import and Diagram Creation</a></span></p>

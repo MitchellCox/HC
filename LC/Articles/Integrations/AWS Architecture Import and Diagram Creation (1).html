@@ -1,0 +1,77 @@
+
+<p>Lucidchart now allows you to import your AWS infrastructure to easily create diagrams that represent your AWS architecture.<br /><br /><iframe src="https://player.vimeo.com/video/154790321?title=0&amp;byline=0&amp;portrait=0" width="500" height="304" frameborder="0" allowfullscreen=""></iframe></p>
+
+
+<div id="accordion" class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseOne" data-toggle="collapse" data-parent="#accordion2">Import Via Docs List</a></div>
+
+		<div id="collapseOne" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<p>To import your AWS architecture into Lucidchart, click on the “Import” button and select the “AWS Architecture” option.<br /><br /><img class="wysiwyg-text-align-center" src="/hc/en-us/article_attachments/202739856/Import_Dialogue.PNG" alt="" /></p>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseTwo" data-toggle="collapse" data-parent="#accordion2">Import Via API</a>
+		</div>
+
+		<div id="collapseTwo" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<p>To import your AWS infrastructure into Lucidchart via API, follow these steps:</p>
+				<ol>
+					<li><a href="/hc/en-us/articles/208018563">Create an IAM user</a> with the stated policy. We suggest creating a new user for your Lucidchart import credentials and adding an <a href="/hc/en-us/articles/208018563">inline policy</a> to that user. This will allow you to easily control or revoke access, as needed.<br /><br /><img src="/hc/en-us/article_attachments/202739986/AWS_Import_Roles_Script.PNG" alt="" /></li>
+					<li>Enter the IAM keys for the newly created user manually, or upload a CSV or config file to enter the keys. Additionally, select the region you wish to use for the AWS import. Right now, Lucidchart only supports importing one region per document.<br /><br /><img src="/hc/en-us/article_attachments/202890493/AWS_Import_Credentials.PNG" alt="" /></li>
+					<ul>
+						<li><em>Note about security</em>: Lucidchart does not save these credentials, and only uses them once at the time of import. You’ll have to re-add the credentials for every document you create. We hope this reduces security concerns, as your credentials are only being used at the time that you click “import”.</li>
+					</ul>
+					<li>Import the AWS architecture</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseThree" data-toggle="collapse" data-parent="#accordion2">AWS Diagram Creation</a></div>
+
+		<div id="collapseThree" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<p>Once you have imported your AWS architecture, you can create your diagram using the imported objects. To create your diagram, follow these steps:</p>
+				<ol>
+					<li>Upon importing your AWS architecture, Lucidchart will generate a list of AWS components within the “Imported AWS Toolbox” section of the shape library menu. You can use the “Search” feature to search the component list by component name and/or tag. Additionally, you can filter the list to display specific types of components. </li>
+					<li>Drag and drop components from the list to create your diagram.</li>
+					<li>After dragging out diagrams, click the “+” sign to examine the the shape’s connected components. You can filter the list in terms of how traffic flows from that shape: “incoming” lists all components that send traffic inbound to the selected component, and “outgoing” lists all components that receive traffic from the selected component.<br /><br /><img src="/hc/en-us/article_attachments/202890453/AWS_Shape_Connected_Components.PNG" alt="" /></li>
+					<li>Click on a connected component to automatically draw and connect the components.<br /><br /><img src="/hc/en-us/article_attachments/202739956/AWS_Shape_Connected_Components_Auto_Draw.PNG" alt="" /></li>
+					<li>When dragging out new components, Lucidchart will automatically draw connections between connected components based on your diagram settings (see “Import Settings” above).<br /><br /><img src="/hc/en-us/article_attachments/202890433/AWS_Auto_Draw.PNG" alt="" /></li>
+					<li>Ready to purchase AWS Import? Get a quote <a href="https://www.lucidchart.com/pages/aws-architecture-import/contact-sales">here</a>.</li>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseFour" data-toggle="collapse" data-parent="#accordion2">FAQ</a>
+		</div>
+
+		<div id="collapseFour" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<p><strong>Why is there a connection between two items I didn't expect to be connected?</strong></p>
+				<p>Lucidchart's AWS import draws connections based on security groups and subnets, and looks for ports to be open on both sides of a connection. If you're seeing connections you don't expect between items, it's likely that the items have open ports between them. For example, one item may have a port open to send traffic to all IPs, and the other item may have the same port open to receive traffic from all IPs.</p>
+
+				<p><strong>Why don't you make the diagram completely automatic?</strong></p>
+				<p>The first version of Lucidchart's AWS Import tool built diagrams automatically, but customer feedback showed that creating such large, complex diagrams wasn't helpful. The current iteration of the tool provides all the resources to choose from, including the correct icons, names, tags, and all other metadata. This allows a user to quickly create a diagram for their specific use case without any of the tedious work of typing out names or copying and pasting information from the AWS console.</p>
+
+				<p><strong>Why are some of my instances not showing up?</strong></p>
+				<p>Instances within autoscaling groups are represented by the autoscaling group itself, rather than showing each individual instance, as they would all have the same connections. You can still see the instance IDs for those instances in the "Shape Data" panel.</p>
+
+				<p><strong>How do I give Lucidchart access to my AWS architecture?</strong></p>
+				<p>In order for Lucidchart to access your AWS infrastructure, you’ll need to give Lucidchart the credentials for a new IAM user with an inline policy. For an overview of how to create an IAM user with an inline policy, check out <a href="/hc/en-us/articles/208018563">this article</a>.</p>
+			</div>
+		</div>
+	</div>
+</div>

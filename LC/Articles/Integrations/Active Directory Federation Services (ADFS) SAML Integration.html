@@ -1,0 +1,81 @@
+<p>Integrating Lucidchart with ADFS enables your users to authenticate using SAML single-sign on through ADFS. The following tutorial walks through the process of integrating ADFS with Lucidchart.</p>
+
+<div id="accordion" class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseOne" data-toggle="collapse" data-parent="#accordion2">Download Federation Metadata and Configure Lucidchart</a></div>
+
+		<div id="collapseOne" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p>To get started you will first download the federation metadata and import it into Lucidchart.<p>
+					<ol>
+						<li>Download the federation metadata. The federation metadata can be accessed on the ADFS server at the following URL replacing [myserver.domain] to reflect your ADFS server URL.<br /><br />https://[myserver.domain].com/FederationMetadata/2007-06/FederationMetadata.xml<br /><br /></li>
+						<li>Navigate to the Lucidchart Admin Panel by selecting 'Team' on the Lucidchart documents screen.<br /><br /><img src="https://lh5.googleusercontent.com/RTgNlwEaw5KNf-fIOi8ht5Gxc2e2bicaoYPrkhBoZEQHVw4n2uUpIXwu7cueiXAHQrS_vY-_L4e6cEJQIqQmFmAGAZTyYAgRH1yyRGjSDxsR8xxBo1ListP-59VVY6zQrD0iJuHK" alt="" width="624px;" height="73px;" /><br /><br /></li>
+						<li>Navigate to the 'App Integration' panel.<br /><br /><img src="https://lh5.googleusercontent.com/LU0ovuy0C3QRsjye0Vr18wo4orGBKtAGCBwtcIET8_8ZOQLYKqQvJt5gwxFo1xAP3a4zq_biBKxVOo1tzKzDhzjPOeodGt_h3Pz7IkO0VBy3P0c9RCFAczq1nuvehhYNyeoGxq7P" alt="" width="624px;" height="252px;" /><br /><br /></li>
+						<li>Select ‘SAML’ on the integrations page.<br /><br /><img src="https://lh5.googleusercontent.com/j1ta9Qzgo_gEpUhMY6C7kPOxDWanQoXD-ZmQUWk5TfabDbOZt0E0GnTYewRb6fhAFsyMMaBLHgtF7CxuuuASh8xpCSdOw6HPJq8uT6xo6JcD7vTktIZIsGGAOsK_afXLYNpRNecS" alt="" width="624px;" height="257px;" /><br /><br /></li>
+						<li>Select ‘Enable SAML Integration’ at the top of the page.<br /><br /><img src="https://lh6.googleusercontent.com/fy_Y7FxRVuJxEdG88RkAU9AaG0e8vyFBnG9YT3Lq0YfQtwY-wJlOSxW_KPnxlXn8T6BQKBP1Mx_oRQIWoU30cUn6GimQnOWmUUr4eYzcRrxzh75fbU5Ft494U220OdZxychr-6zs" alt="" width="624px;" height="175px;" /><br /><br /></li>
+						<li>Enter your account domain in the ‘Domain’ field under the ‘Lucidchart Sign in URL’ section. Be sure to enter in just the domain, not a full URL.<br /><br /><img src="https://lh5.googleusercontent.com/4PJ1A5ZwInNM1QxaaplEmMYZV0ArcMSkYGrIVLZdYgBicp5IGO_JZvVE7eYOGRGygmyM0zAOaoJa9bS2kVP6TXNvEQxrlgUtHJBt8fBXywvNzrdVbs_qrRDuMh7fhiaEBHjxeo0M" alt="" width="624px;" height="160px;" /><br /><br /></li>
+						<li>Open the federation metadata XML file using a text editor. Copy the text from the XML file and paste it into the text box under ‘Identity Provider Metadata’ and select ‘Save changes’.<br /><br /><img src="https://lh4.googleusercontent.com/fH6Td3_CfHUbI1unfwXXOoNDONlDtDiQsGpCt4HwO6As731NRQNQSYY94xP_iwiEohwl7V-k4SLiLntKDuBvAqTq6D0nLgu_G4h8xTfpacHkkS_rMEyBrfswXDd2IKoNEq_YUhqm" alt="" width="624px;" height="380px;" /><br /><br />This completes the SAML setup in Lucidchart. Next we will create and configure the Lucidchart Relying Party Trust in ADFS.</li>
+					</ol>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseTwo" data-toggle="collapse" data-parent="#accordion2">Create and Configure Relying Party Trust in ADFS</a>
+		</div>
+		<div id="collapseTwo" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p dir="ltr">Next we will create and configure a Relying Party Trust using the Lucidchart metadata.</p>
+					<ol>
+						<li>From the Lucidchart SAML page select 'Download Metadata' to download the Lucidchart metadata. Save the metadata in a location accessible to the ADFS server.<br /><br /><img src="/hc/en-us/article_attachments/205824683/Screen_Shot_2016-07-29_at_11.40.42_AM.png" alt="" width="607" height="132" /><br /><br /></li>
+						<li>Open ADFS and right-click on 'Relying Party Trust'. Select 'Add Relying Party Trust' from the menu to open the 'Add Relying Party Trust Wizard'.<br /><br /><img src="/hc/en-us/article_attachments/205826843/Add_Relying_Party_Trust.png" alt="" width="593" height="381" /><br /><br /></li>
+						<li>Click-through the 'Welcome' screen and select 'Import data about the relying party from a file' on the 'Select Data Source' screen. Select 'Browse' and locate the Lucidchart metadata file. Complete the remaining settings based on your organization's preferences.<br /><br /><img src="/hc/en-us/article_attachments/205827243/Select_Data_Source.png" alt="" width="530" height="427" /><br /><br /></li>
+						<li>Right-click on the recently created Lucidchart Relying Party Trust and select 'Properties' from the drop-down menu. Select the 'Advanced' tab and change the hash algorithm from 'SHA-256' to 'SHA-1' and select 'Apply'.<br /><br /><img src="/hc/en-us/article_attachments/205777646/Hash_Algorithm_SHA-1.png" alt="" width="522" height="496" /><br /><br /></li>
+						<li>
+							<p dir="ltr">Right-click on the Lucidchart Relying Party Trust and select 'Edit Claim Rules'. Add claim rule using LDAP and configure the claim rule to match the following attributes and claim types:<br /><br /><img src="/hc/en-us/article_attachments/205777766/Claim_Rule.png" alt="" width="562" height="449" /><br /><br /></p>
+						</li>
+					</ol>
+				<p>That will complete the ADFS SAML integration in Lucidchart. Now your Lucidchart account will support SAML single-sign on authentication through ADFS.</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseThree" data-toggle="collapse" data-parent="#accordion2">ADFS SAML Integration Troubleshooting</a>
+		</div>
+		<div id="collapseThree" class="panel-collapse collapse">
+			<div class="panel-body">
+				<p><strong>Invalid SAML Response</strong></p>
+
+				<p>This error corresponds with an incorrect SAML response from the IDP. In ADFS this typical means that the hash algorithm needs to be switched from SHA-256 to SHA-1. Navigate to the Lucidchart Relying Party Trust, right-click and select “Properties”. Navigate to the “Advanced” tab and switch the hash algorithm from SHA-256 to SHA-1.</p>
+
+				<p><strong>SAML isn not configured for your team. Request an invite from a SAML enabled team.</strong></p>
+
+				<p>The user attempting to log in through SAML is not associated with the SAML enabled team. The admin will need to send an invite to the user to be accepted on to the team. From the Lucdichart Admin Panel select ‘Users’. Select ‘+Users’ in the top-right of the Users page and enter the user’s email into the</p>
+
+				<p><strong>Invalid Identity Attribute</strong></p>
+
+				<p>This error indicates that an invalid identity attribute was received in the SAML response. Configure a claim attribute for the Lucidchart relying party trust where ‘Email-Addresses’ corresponds to ‘Name ID’ in ADFS.</p>
+
+				<p><strong>Could Not Parse XML</strong></p>
+
+				<p>Indicates an incorrect syntax in the identity provider XML metadata. This can happen when downloading metadata from an Internet Explorer window. Internet Explorer will add dashes to XML tag for expanding and collapsing. You can fix this by either opening the XML data in a text editor or by deleting all of the dashes in the copied XML text.</p>
+
+				<p><strong>username_12345@example.com Users Being Created</strong></p>
+
+				<p>The Lucidchart SAML integration accepts 3 attributes: First Name, Last Name, and Email Address. When an invalid email address is passed from the SAML identity provider a valid email will be generated to create the user that will be ‘passed value’ + ‘SAML ID’ + ‘@example.com’. This commonly happens when a user name or given name is passed to the Email Address attribute instead of the valid email. You can fix this issue by configuring your claim rule to send a valid email address in the Email Address attribute.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<p></p>
+
+<p><strong>Related Articles</strong><p>
+<p><a href="/hc/en-us/articles/207300096-Lucidchart-and-SAML">Lucidchart and SAML</a></p>
+<p><a href="/hc/en-us/articles/207300136-OneLogin-SAML-Integration">OneLogin SAML Integration</a></p>
+<p><a style="background-color: #ffffff;" href="/hc/en-us/articles/207300146-Okta-SAML-and-SCIM-Integration">Okta SAML and SCIM Integration</a></p>
+<hr />
+<p><strong>Related Community Posts</strong></p>
+<p><a href="/hc/en-us/community/posts/206027163-Admin-pages-for-Google-Apps-JIRA-SAML-and-Confluence">Admin pages for Google Apps, JIRA, SAML, and Confluence</a></p>
+<p><a href="/hc/en-us/community/posts/205317546-Can-LucidChart-SAML-users-login-to-IOS-app">Can LucidChart SAML users login to IOS app</a></p>
+<p><a href="/hc/en-us/community/posts/207023266-How-do-I-setup-Identity-management-pages-">How do I set up Identity Management Pages</a></p>
