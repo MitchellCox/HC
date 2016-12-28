@@ -1,0 +1,118 @@
+<h1>Great news! JIRA integrates with Lucidchart to make inserting diagrams directly from Lucidchart to JIRA quick and easy. Read on to get started.</h1>
+<hr /><!-- Line -->
+
+<!-- Accordion Text -->
+<div id="accordion" class="panel-group"><!--Accordion 1-->
+<div class="panel panel-default">
+<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseOne" data-toggle="collapse" data-parent="#accordion2"> <strong> JIRA Cloud </strong> </a></div>
+<div id="collapseOne" class="panel-collapse collapse">
+<div class="panel-body">
+
+<h3>Lucidchart is proud to announce that we have just released an add-on for Atlassian's JIRA Cloud. Watch this video to learn how to install and configure the add-on.</h3>
+<p><iframe src="https://www.youtube.com/embed/23hh_v2gWDA" width="640" height="450" frameborder="0"></iframe></p>
+<h3><u>Create a Lucidchart Team Account</u></h3>
+<p>A Lucidchart Team account is needed to integrate with JIRA. Note that Personal, Professional, and Free accounts cannot be integrated with Confluence.</p>
+<ul>
+<li>If you do not have a Lucidchart account, a free team trial is available on the <span data-mce-mark="1"><a title="Level Selection page" href="https://www.lucidchart.com/users/registerLevel" target="_blank">Pricing page</a></span>. </li>
+<li><span data-mce-mark="1">If you have already completed a trial and currently have a Free, Personal, or Professional account</span>, go to the <span data-mce-mark="1"><a title="Subscription Level" href="https://www.lucidchart.com/users/level">Subscription Level</a></span> page within your account and select the appropriate team license tier.</li>
+</ul>
+<hr />
+<h3><u>Install the add-on for JIRA Cloud</u></h3>
+<ol>
+<li><span data-mce-mark="1">Your JIRA administrator must install the Lucidchart Add-on for JIRA.</span></li>
+<li><span data-mce-mark="1"><span data-mce-mark="1"><span data-mce-mark="1">Log into your JIRA instance as an Admin, and click the “gear” icon. Click “Add-ons,” then “Find New Add-ons” on the left sidebar.</span></span></span></li>
+<li><span data-mce-mark="1"><span data-mce-mark="1"><span data-mce-mark="1">Search the marketplace for “Lucidchart for JIRA” and click “Install.” Click “Accept &amp; Install,” wait for the download, and “close” the dialogue box.</span></span></span></li>
+</ol>
+<p><span data-mce-mark="1">Alternatively, go to the </span><a title="Atlassian Marketplace Lucidchart Add On listing" href="https://marketplace.atlassian.com/plugins/com.lucidchart.jira.plugins.lucid-jira#cloud" target="_blank">Atlassian Marketplace Lucidchart Add On listing</a><span data-mce-mark="1">, click "Get It Now," sign in with your Atlassian Marketplace credentials, and follow the installation instructions.</span></p>
+<hr />
+<h3><u><span data-mce-mark="1">Configure the add-on</span></u></h3>
+<ol>
+<li><span data-mce-mark="1">Go to "Manage Add-ons" and find Lucidchart. <br /><br /></span><em><img src="/attachments/token/K1LxYVPrhjpzhV78psAWBL6lj/?name=Manage+Add+Ons.png" alt="Manage_Add_Ons.png" width="591" height="447" /><br /><br /></em></li>
+<li><span data-mce-mark="1">You need to have a Team account on Lucidchart and log in as the administrator of that team. If you don't have a team account, sign up for a <a title="Team Trial" href="https://www.lucidchart.com/users/register/team-5" target="_blank">Team Trial</a>.<br /><br /><em><img src="/attachments/token/59yIR2DlvTjeWIlWttcyksLWl/?name=Create+team.PNG" alt="Create_team.PNG" width="566" height="410" /><br /><br /></em></span></li>
+<li><span data-mce-mark="1">You will be prompted to link your existing Lucidchart team account with your JIRA cloud instance.<br /><br /><img src="/attachments/token/tFkLKO1EpEi7WpGgUCoIdTwn8/?name=Link+your+team.PNG" alt="Link_your_team.PNG" width="562" height="233" /><br /><br /></span></li>
+<li><span data-mce-mark="1">You will also be prompted to link your Lucidchart user credentials with your JIRA Cloud user. <span data-mce-mark="1">All users on your instance will be prompted to do this when they attempt to attach a diagram to an issue or edit it.<br /><br /><img src="/attachments/token/EAXrIZeU4gVhkOErMPONC5wOZ/?name=Link+JIRA.PNG" alt="Link_JIRA.PNG" width="571" height="348" /><br /></span></span></li>
+<li><span data-mce-mark="1"><span data-mce-mark="1"><span data-mce-mark="1">After linking your account to Confluence, you have successfully configured Lucidchart add-on to your instance. If you created a new Team account, make sure to invite colleagues to your team. </span><span data-mce-mark="1">If you accidentally linked the wrong team account to your instance, there is an "Unlink" button. <br /><br /><img src="/attachments/token/PJYxBmXa5GI2oxXvwTIYJpBte/?name=Add+On+ready.PNG" alt="Add_On_ready.PNG" width="571" height="218" /><br /></span></span></span></li>
+</ol>
+<hr />
+<h3><u>How to Use the Lucidchart add-on for JIRA Cloud</u></h3>
+<h3>Inserting</h3>
+<ol>
+<li>Navigate to any JIRA issue and select "Attach Lucidchart Diagram" from the "More" drop-down menu at the top.<br /><br /><img src="/attachments/token/fuI6nzGBG3eXjwM4Pi1SuGVHn/?name=More+Menu.PNG" alt="More_Menu.PNG" width="389" height="445" /><br /><br /></li>
+<li>Your documents list will pop up:<br /><br /><img src="/attachments/token/vdaLiMLIOzOvCaWUblV8PRc0i/?name=Documents+List.PNG" alt="Documents_List.PNG" width="585" height="157" /><br /><br /></li>
+<li>You'll have the option to insert an existing diagram, create a new one or <a class="createlink" href="https://lucidsoftware.atlassian.net/wiki/pages/createpage.action?spaceKey=EN&amp;title=import+a+Visio%2C+Gliffy+or+OmniGraffle+document&amp;linkCreation=true&amp;fromPageId=11075818">import a Visio, Gliffy or OmniGraffle document</a> directly.<br /><br /><img src="/attachments/token/xsu9vzst5eXWQAmfVcySxuEqq/?name=Import.png" alt="Import.png" /><br /><br /></li>
+<li>After inserting, a new panel will appear on the issue page that contains all diagrams attached to it.<br /><br /><img src="/attachments/token/IJo7p5kAKnN9cPI6kkZkMlP6N/?name=Diagrams.PNG" alt="Diagrams.PNG" width="565" height="695" /></li>
+</ol>
+<h3>Viewing</h3>
+<ol>
+<li>You can open any diagram in a full screen viewer by clicking on its thumbnail.<br /><br /><img src="/attachments/token/V0VV3A1KMGOdkH5KcStJh0aZr/?name=View.png" alt="View.png" width="511" height="260" /></li>
+</ol>
+<h3>Editing/Deleting</h3>
+<ol>
+<li>Move your mouse cursor over a diagram and click the "pencil" icon.<br /><br /><img src="/attachments/token/2SeqTeV7LIkmEABA0B3NYCvy8/?name=Edit.png" alt="Edit.png" /></li>
+<li>A full-screen editor will open. If the icon is disabled, this means you don't have the permission to edit the diagram. You need the person who owns the diagram give you edit access. For more information, see <a class="createlink" href="https://lucidsoftware.atlassian.net/wiki/pages/createpage.action?spaceKey=EN&amp;title=I+can%27t+edit+diagrams+in+JIRA+Cloud&amp;linkCreation=true&amp;fromPageId=11075818">I can't edit diagrams in JIRA Cloud</a>.<br /><br /><img src="/attachments/token/U7f2Nzc3jbo0PRDSd1Hz69zXj/?name=Full+Screen+Editor.png" alt="Full_Screen_Editor.png" width="585" height="303" /><br /><br /></li>
+<li>Click "Return to JIRA" when you're done. The attached diagram will update automatically.</li>
+<li>To delete a diagram attachment, simply click the trash icon. <em>Note that this will not delete the diagram from Lucidchart website.</em></li>
+</ol>
+<h3>Refreshing</h3>
+<ol>
+<li>If you attach a diagram to JIRA and somebody else edits it on Lucidchart's website directly, the attached version will not update automatically. You will have to manually click the "refresh" icon to update the attachment to the latest version from Lucidchart.</li>
+</ol>
+<p> </p>
+</div>
+</div>
+</div>
+
+<!-- Accordion 2-->
+<div class="panel panel-default">
+<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseTwo" data-toggle="collapse" data-parent="#accordion2"> <strong> JIRA Server </strong> </a></div>
+<div id="collapseTwo" class="panel-collapse collapse">
+<div class="panel-body">
+
+<h3><u>Step 1: Install the Lucidchart Plugin for JIRA</u><br /><br /></h3>
+<ol>
+<ol>
+<li>Your JIRA administrator must install the Lucidchart plugin for JIRA. Navigate to "Administration" on the right side of the JIRA toolbar.<br /><br /><img src="/attachments/token/7femqdausbuhoou/?name=JIRA1.png" alt="JIRA1.png" width="370" /></li>
+<li>Click on "Plugins" on the left side of the JIRA toolbar once in the administration panel.<br /><br /><img src="/attachments/token/79u2ektwqpu1vao/?name=JIRA3.png" alt="JIRA3.png" width="422" height="112" /></li>
+<li>Select the "Install Plugins" tab and then "Upload Plugin" near the right side. Follow the dialog to upload the Lucidchart plugin. Download the plugin <a style="line-height: 1.45em; background-color: initial;" href="https://marketplace.atlassian.com/plugins/com.lucidchart.jira.plugins.lucid-jira" target="_blank">here</a>.<br /><br /><img src="/attachments/token/njcpmqqx9pld7h4/?name=JIRA2.png" alt="JIRA2.png" width="564" height="96" /></li>
+<li>Once uploaded, navigate to the "Manage My Plugins" tab, click "Lucidchart Plugin," and then "Configure" to fill in the key and secret for your organization.<br /><br /><img src="/attachments/token/emmjavxqzeu063k/?name=JIRA4.png" alt="JIRA4.png" width="575" height="188" /></li>
+<li>To obtain the key and secret, you must be the administrator for your organization in Lucidchart. If you are the Lucidchart Administrator, click <a style="line-height: 1.45em; background-color: initial;" href="https://www.lucidchart.com/teams">here</a> to obtain your key and secret and then navigate to "Manage JIRA" on the right side panel.<br /><br /><img src="/attachments/token/e5xvjbjyx7fabpw/?name=JIRA5.png" alt="JIRA5.png" /><br /><br /></li>
+<li><span style="line-height: 1.45em; background-color: initial;">Generate a key and secret on the </span><a style="line-height: 1.45em; background-color: initial;" href="http://www.lucidchart.com/teams" target="_blank">Team page</a><span style="line-height: 1.45em; background-color: initial;"> in Lucidchart.<br /><br /></span><img style="line-height: 1.45em; background-color: initial;" src="/attachments/token/zxoibeyggbp2yxk/?name=JIRA6.png" alt="JIRA6.png" /></li>
+<li>Copy the key and secret into their respective fields in JIRA and click Save.<br /><br /><img src="/attachments/token/nnuov5slrf8yves/?name=Screen+Shot+2013-06-05+at+10.24.35+AM.png" alt="Screen_Shot_2013-06-05_at_10.24.35_AM.png" width="370" /></li>
+</ol>
+</ol>
+</div>
+<hr />
+<h3 class="grid_6 omega"><u>Step 2: Adding, drawing, and exiting a diagram</u></h3>
+<h3 class="grid_6 omega"> Adding a diagram</h3>
+<div class="grid_6 omega">
+<div class="grid_6 alpha">
+<ol>
+<ol>
+<li>Select Insert Lucidchart Diagram from the More Actions drop-down menu at the top of your issue in <a href="https://www.lucidchart.com/pages/tour/jira">JIRA</a>.<img src="https://cdn-lucidchart-com.s3.amazonaws.com/jira-insert-0.png" alt="" width="290" /></li>
+<li>You'll be then have the option to begin a new Lucidchart document, open an existing Lucidchart document, or directly <a style="line-height: 1.45em; background-color: initial;" title="Import Visio File" href="http://support.lucidchart.com/entries/21604324-Import-export-Visio-files" target="_blank">import a Visio file</a>. You can learn more about starting new documents and opening existing documents in our <a style="line-height: 1.45em; background-color: initial;" href="http://support.lucidchart.com/categories/20063795-Tutorials">tutorials</a>. Selecting a document takes you directly to the Lucidchart editor.<br /><br /><img src="http://support.lucidchart.com/attachments/token/b6xtnyekowygsdz/?name=cop6.png" alt="cop6.png" width="518" height="214" /></li>
+</ol>
+</ol>
+</div>
+<hr />
+<h3><u>Drawing in the Lucidchart editor</u></h3>
+<div class="grid_6 alpha">
+<ol>
+<ol>
+<li>The Lucidchart editor is where where all the magic happens. <a href="http://support.lucidchart.com/entries/21605619-Get-familiar-with-the-Lucidchart-editor">This short tutorial</a> explains the basic components of what you see when you open a document - the canvas, property bar, toolbox, dock, and collaboration bar (click the image to learn more).<br /><br /><a href="http://support.lucidchart.com/entries/21605619-Get-familiar-with-the-Lucidchart-editor" target="_blank"><img src="http://support.lucidchart.com/attachments/token/egxe1pm5ef9g2ug/?name=LucidChart_Editor_Overview18.png" alt="LucidChart_Editor_Overview18.png" width="543" height="304" /></a></li>
+</ol>
+</ol>
+</div>
+<hr />
+<div class="grid_6 alpha">
+<h3><u>Exiting the Lucidchart editor</u></h3>
+<ol>
+<ol>
+<li>When you are finished editing your document in the Lucidchart editor, click the "Return to JIRA" button in the upper right corner to return to JIRA. Your diagram will be automatically added or updated.<br /><br /><img src="http://support.lucidchart.com/attachments/token/dsh2ec2hs1dscac/?name=return_to_JIRA_lucidchart.png" alt="return_to_JIRA_lucidchart.png" /></li>
+</ol>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- End Accordion Text-->
