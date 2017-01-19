@@ -1,0 +1,55 @@
+<p>The data linking feature allows you to link Lucidchart shapes to live data located in Google Sheets. The shape data will automatically update as changes are made to Google Sheets, allowing you to visualize your processes in real time.</p>
+<p>This feature is only available in the beta editor and to enterprise users. To upgrade, click <a href="https://www.lucidchart.com/users/registerLevel?utm_source=Chart_HC&utm_medium=5_Active&utm_campaign=Pricing_Page">here</a>.
+<p><iframe width="560" height="315" src="https://www.youtube.com/embed/qi3t95YGyK8" frameborder="0" allowfullscreen></iframe></p>
+<div id="accordion" class="panel-group">
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseOne" data-toggle="collapse" data-parent="#accordion2">Link your data to Lucidchart</a></div>
+
+		<div id="collapseOne" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<ol>
+					<li>Create a New Document in Lucidchart.</li>
+					<li>Click File > Import Data from Sheets. If you haven’t already given Lucidchart permission to access your Google Sheets documents, you will be asked to do so. Click “Authenticate” and then “Allow” on the following pop-up window.<br /><br /><img src="/hc/en-us/article_attachments/115001015803/Screen_Shot_2017-01-18_at_12.32.52_PM.png" alt="" /></li>
+					<li>Choose the Google Sheet you would like linked to your Lucidchart document.<br /><br /><img src="/hc/en-us/article_attachments/115001037066/Screen_Shot_2017-01-18_at_1.45.05_PM.png" alt="" width="731" height="447" /></li>
+					<li>Select the tab of the sheet containing the data you would like linked.<br /><br /><img src="/hc/en-us/article_attachments/115001016003/Screen_Shot_2017-01-18_at_12.31.07_PM.png" alt="" /></li>
+				</ol>
+				<p>Your imported data will appear on the bottom right-hand corner of your screen.<br /><br /><img src="/hc/en-us/article_attachments/115001016403/Screen_Shot_2017-01-18_at_3.43.42_PM.png" alt="" /></p>
+				<p>Note: Your Lucidchart data set will update periodically to show changes made in Google Sheets. If you don’t see the changes right away, click this button to sync.<img src="/hc/en-us/article_attachments/115001037946/Screen_Shot_2017-01-18_at_2.00.05_PM.png" alt="" /></p>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseTwo" data-toggle="collapse" data-parent="#accordion2">Assign data to shapes</a></div>
+
+		<div id="collapseTwo" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<p>This data set can now be assigned to any existing shape on your document by using Shape Data.</p>
+				<ol>
+					<li>Select the shape to which you would like to assign data.</li>
+					<li>Click the +Field button on the upper right-hand corner of the screen to add a new Shape Data field.<img src="/hc/en-us/article_attachments/115001016503/Screen_Shot_2017-01-18_at_12.48.21_PM.png" alt="" /></li>
+					<li>In the “Label” column, title the field. In the example below, the field was titled "Name."<br /><br /><img src="/hc/en-us/article_attachments/115001038006/Screen_Shot_2017-01-18_at_3.49.00_PM.png" alt="" /><img src="/hc/en-us/article_attachments/115001038426/Screen_Shot_2017-01-18_at_3.54.52_PM.png" alt="" /></li>
+					<li>In the “Value” column, link the field to a cell in the data set by entering “=” and the desired cell. While editing the shape data field, the reference (e.g. “=A2”) will be shown. When not being edited, the shape data field will show the value from the referenced cell (e.g. “Anthony Morelli”).</li>
+					<p>This data is now linked to the shape and ready to be used.</p>
+					<p>Note: The data is assigned specifically to the selected shape. The shape must be selected in order to see assigned fields on the right-hand panel.</p>
+				</ol>
+			</div>
+		</div>
+	</div>
+
+	<div class="panel panel-default">
+		<div class="panel-heading"><a class="accordion-toggle collapsed" style="color: #3d4752;" href="#collapseThree" data-toggle="collapse" data-parent="#accordion2">Call data from shape</a></div>
+
+		<div id="collapseThree" class="panel-collapse collapse">
+			<div class="panel-body">
+
+				<p>In order for your data to appear on the shape, you can call it by using the command {{this.Label}}. For example, if I wanted to call the information found in cell A2 of my data set, I would type {{this.Name}} in the shape. Make sure to type the name of the label exactly as you titled it in the Shape Data, including capitalization.<br /><br /><img src="/hc/en-us/article_attachments/115001038486/Screen_Shot_2017-01-18_at_1.49.26_PM.png" alt="" /><img src="/hc/en-us/article_attachments/115001016983/Screen_Shot_2017-01-18_at_1.53.37_PM.png" alt="" /><br /><br /><img src="/hc/en-us/article_attachments/115001017003/Screen_Shot_2017-01-18_at_1.58.26_PM.png" alt="" /></p>
+			</div>
+		</div>
+	</div>
+</div>
+<p></p>
+<div align="center"><button class="btn btn-orange" style="font-size: 19px;"><a style="color: white;" href="https://www.lucidchart.com/documents/editNew/1aa6e11a-0ffd-4c21-bf94-7bd3e4d1b5a9">Try it now in Lucidchart</a></button> <button class="btn" style="font-size: 19px;"><a style="color: white;" href="/hc/en-us/community/topics/">Questions? Ask the Community</a></button></div>
